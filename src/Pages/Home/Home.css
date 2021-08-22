@@ -31,7 +31,7 @@ nline-1 {
   font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   .body-container {
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@ nline-1 {
 }
 
 .left-side {
-  width: 55%;
+  width: 45%;
   margin-left: 5%;
   color: #4720b9;
   margin-top: 8rem;
@@ -149,7 +149,7 @@ nline-1 {
   padding-left: 1.5rem;
   font-size: 2rem;
   border-radius: 8px 0px 0px 8px;
-  width: 25rem;
+  width: 21rem;
   font-weight: 900;
 }
 
