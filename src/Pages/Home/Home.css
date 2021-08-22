@@ -1,0 +1,44 @@
+.main-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ffc700;
+}
+
+.navbar {
+  width: 100vw;
+  background-color: #4720b9;
+}
+
+.nav-text {
+  padding: 1rem;
+  color: white;
+  line-height: 1.4rem;
+  text-align: center;
+}
+
+.nline-1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+nline-1 {
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-text {
+    padding: 0.8rem;
+    color: white;
+    line-height: 1.4rem;
+    text-align: center;
+  }
+
+  .nline-1 {
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  nline-1 {
+    font-size: 0.5rem;
+  }
+}
