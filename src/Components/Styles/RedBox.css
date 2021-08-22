@@ -1,0 +1,16 @@
+.redbox{
+    background-color: var(--secondary);
+    position: fixed;
+    left: 0; 
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+    /* height: 79px;
+    width: 320px; */
+}
+
+.redbox-text {
+    padding: 8px 40px 8px 40px;
+    color: #FFFFFF;
+    font-size: 29px;
+}

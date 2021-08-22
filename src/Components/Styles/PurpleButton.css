@@ -1,0 +1,16 @@
+.purplebutton{
+    background-color: var(--tertiary); 
+    border: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 15px;
+    width: 300px; 
+}
+
+.purplebutton-text {
+    cursor: pointer;
+    padding: 10px 25px 10px 25px;
+    color: #FFFFFF;
+    font-size: 29px;
+    text-align: center;
+}
