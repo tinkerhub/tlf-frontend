@@ -37,16 +37,18 @@ function Home() {
           </div>
 
           <div className="right-side">
-            <div className="stacks">
-              <p>Flutter</p>
-              <p>Python</p>
-              <p>JavaScript</p>
-            </div>
+            <div className="right-content">
+              <div className="stacks">
+                <p>Flutter</p>
+                <p>Python</p>
+                <p>JavaScript</p>
+              </div>
 
-            <div className="learn">
-              <p>
-                Let’s teach &<br /> learn together
-              </p>
+              <div className="learn">
+                <p>
+                  Let’s teach &<br /> learn together
+                </p>
+              </div>
             </div>
           </div>
         </div>

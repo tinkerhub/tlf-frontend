@@ -55,17 +55,16 @@ nline-1 {
 }
 
 .left-side {
-  width: 45%;
+  width: 55%;
   margin-left: 5%;
   color: #4720b9;
   margin-top: 8rem;
 }
 
-
-
 .main-text {
-  font-size: 2.5rem;
+  font-size: 3rem;
   letter-spacing: 0.8px;
+  line-height: 3.5rem;
 }
 
 .sub-text {
@@ -127,29 +126,34 @@ nline-1 {
   }
 }
 
-
 /* Right Side */
 .right-side {
-    margin-top: 8rem;
-    width: 45%;
-  }
-
-.stacks{
-    font-size: 3rem;
-    font-weight: 900;
-    color: #4720b9;
-    line-height: 3.6rem;
-    letter-spacing: 0.05rem;
-
+  margin-top: 9rem;
+  width: 50%;
+  position: relative;
 }
 
-.learn{
-    margin-top: 1rem;
-    padding: 0.5rem;
-    color: white;
-    background-color: #4720b9;
-    padding-left: 1.5rem;
-    font-size: 2rem;
-    width: 18rem;
-    font-weight: 900;
+.stacks {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #4720b9;
+  line-height: 4.6rem;
+  letter-spacing: 0.05rem;
+}
+
+.learn {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: #4720b9;
+  padding-left: 1.5rem;
+  font-size: 2rem;
+  border-radius: 8px 0px 0px 8px;
+  width: 25rem;
+  font-weight: 900;
+}
+
+.right-content {
+  position: absolute;
+  right: 0;
 }
