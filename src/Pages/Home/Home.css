@@ -9,6 +9,8 @@
   background-color: #ffc700;
 }
 
+/* NavBar CSS Starts */
+
 .navbar {
   width: 100vw;
   background-color: #4720b9;
@@ -31,6 +33,9 @@ nline-1 {
   font-size: 0.8rem;
 }
 
+/* NavBar CSS Ends */
+
+/* NavBar CSS for smaller devices Starts*/
 @media only screen and (max-width: 720px) {
   .body-container {
     display: flex;
@@ -53,7 +58,9 @@ nline-1 {
     font-size: 0.5rem;
   }
 }
+/* NavBar CSS for smaller devices Ends*/
 
+/* Left Side CSS Starts */
 .left-side {
   width: 45%;
   margin-left: 5%;
@@ -98,8 +105,10 @@ nline-1 {
   width: 25%;
   border-radius: 8px;
 }
+/* Left Side CSS Ends */
 
-@media only screen and (max-width: 600px) {
+/* Left Side Body CSS for smaller devices starts*/
+@media only screen and (max-width: 720px) {
   .left-side {
     width: 90%;
     margin-left: 5%;
@@ -125,8 +134,9 @@ nline-1 {
     width: 40%;
   }
 }
+/* Left Side Body CSS for smaller devices ends*/
 
-/* Right Side */
+/* Right Side Body CSS Starts */
 .right-side {
   margin-top: 9rem;
   width: 50%;
@@ -156,4 +166,38 @@ nline-1 {
 .right-content {
   position: absolute;
   right: 0;
+}
+/* Right Side Body CSS Ends */
+
+@media only screen and (max-width: 720px) {
+  .main-container {
+    min-height: 160vh;
+  }
+
+  .right-side {
+    margin-top: 3rem;
+    width: 90%;
+    position: none;
+    margin-left: 10%;
+  }
+
+  .stacks {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #4720b9;
+    line-height: 3rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .learn {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: #4720b9;
+    padding-left: 1.5rem;
+    font-size: 1.8rem;
+    border-radius: 8px 0px 0px 8px;
+    width: 15rem;
+    font-weight: 900;
+  }
 }
