@@ -1,3 +1,8 @@
+.body-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .main-container {
   width: 100vw;
   min-height: 100vh;
@@ -27,6 +32,11 @@ nline-1 {
 }
 
 @media only screen and (max-width: 600px) {
+  .body-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .nav-text {
     padding: 0.8rem;
     color: white;
@@ -48,8 +58,10 @@ nline-1 {
   width: 45%;
   margin-left: 5%;
   color: #4720b9;
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
+
+
 
 .main-text {
   font-size: 2.5rem;
@@ -72,8 +84,9 @@ nline-1 {
   width: 25%;
   border-radius: 8px;
 
-  margin: 1.5rem;
+  margin: 2rem;
   margin-left: 0rem;
+  margin-right: 1rem;
 }
 
 .login {
@@ -87,4 +100,56 @@ nline-1 {
   border-radius: 8px;
 }
 
+@media only screen and (max-width: 600px) {
+  .left-side {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3rem;
+  }
 
+  .main-text {
+    font-size: 2rem;
+    letter-spacing: 0.8px;
+  }
+
+  .sub-text {
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .signup {
+    width: 40%;
+  }
+
+  .login {
+    width: 40%;
+  }
+}
+
+
+/* Right Side */
+.right-side {
+    margin-top: 8rem;
+    width: 45%;
+  }
+
+.stacks{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #4720b9;
+    line-height: 3.6rem;
+    letter-spacing: 0.05rem;
+
+}
+
+.learn{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: #4720b9;
+    padding-left: 1.5rem;
+    font-size: 2rem;
+    width: 18rem;
+    font-weight: 900;
+}

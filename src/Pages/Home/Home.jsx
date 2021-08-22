@@ -15,25 +15,19 @@ function Home() {
         <div className="body-container">
           <div className="left-side">
             <p className="main-text">
-              Welcome to
+              Welcome to{" "}
               <b>
                 TinkerHub’s <br />
-                Learning Facilitator Program
+                Learning Facilitator Program.
               </b>
             </p>
 
             <p className="sub-text">
-              TinkerHub Learning Facilitators Program 2021 <br />
-              is a{" "}
-              <b>
-                6-month learning initiative by the
-                <br />TinkerHub Foundation {" "}
-              </b>
-              to create a pool of
-              <br /> mentors <b>in 3 different stacks</b> for various
-              <br />
-              learning programs, curating courses,
-              <br />one-to-one mentoring, etc.
+              TinkerHub Learning Facilitators Program 2021 is a{" "}
+              <b>6-month learning initiative by the TinkerHub Foundation</b>
+              to create a pool of mentors <b>in 3 different stacks</b> for
+              various learning programs, curating courses, one-to-one mentoring,
+              etc.
             </p>
 
             <div className="buttons">
@@ -42,7 +36,19 @@ function Home() {
             </div>
           </div>
 
-          <div className="right-side"></div>
+          <div className="right-side">
+            <div className="stacks">
+              <p>Flutter</p>
+              <p>Python</p>
+              <p>JavaScript</p>
+            </div>
+
+            <div className="learn">
+              <p>
+                Let’s teach &<br /> learn together
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
