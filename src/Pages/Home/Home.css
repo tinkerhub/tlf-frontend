@@ -7,6 +7,7 @@
 .navbar {
   width: 100vw;
   background-color: #4720b9;
+  border-radius: 0px 0px 8px 8px;
 }
 
 .nav-text {
@@ -42,3 +43,48 @@ nline-1 {
     font-size: 0.5rem;
   }
 }
+
+.left-side {
+  width: 45%;
+  margin-left: 5%;
+  color: #4720b9;
+  margin-top: 5rem;
+}
+
+.main-text {
+  font-size: 2.5rem;
+  letter-spacing: 0.8px;
+}
+
+.sub-text {
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.signup {
+  background-color: #f34e1e;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  width: 25%;
+  border-radius: 8px;
+
+  margin: 1.5rem;
+  margin-left: 0rem;
+}
+
+.login {
+  background-color: #f34e1e;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  width: 25%;
+  border-radius: 8px;
+}
+
+
