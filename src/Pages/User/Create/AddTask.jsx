@@ -4,25 +4,24 @@ import PurpleButton from '../../../Components/PurpleButton';
 import RedBox from '../../../Components/RedBox';
 import TextField from '../../../Components/TextField';
 
-import './CreateTask.css'
+import './AddTask.css'
 
-function AdminCreateTask() {
+function UserAddTask() {
     return (
         <div>
             <HeaderBar />
 
             <form className="container">
                 <RedBox label="Create Task" />
-                <div style={{ padding: '20px' }} />
-                <TextField label="Facilitator" />
+                <div style={{ padding: '40px' }} />
                 <TextField label="Task Name" />
                 <TextField label="Assign Date" />
                 <TextField label="Completed Date" />
                 <TextField label="Due Date" />
-                <PurpleButton label="Create Task" />
+                <PurpleButton label="Add Task" />
             </form>
         </div>
     );
 }
 
-export default AdminCreateTask;
+export default UserAddTask;

@@ -6,7 +6,7 @@ import TextField from '../../../Components/TextField';
 
 import './UpdateTask.css'
 
-function UpdateTask() {
+function AdminUpdateTask() {
     return (
         <div>
             <HeaderBar />
@@ -25,4 +25,4 @@ function UpdateTask() {
     );
 }
 
-export default UpdateTask;
+export default AdminUpdateTask;
