@@ -3,8 +3,8 @@ import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
 import "./UserHome.css";
-import Due from './Due.png'
-import Finish from './Finish.png'
+import Due from "./Due.png";
+import Finish from "./Finish.png";
 
 function UserHome() {
   return (
@@ -12,7 +12,7 @@ function UserHome() {
       <div className="uhmain-container">
         <HomeNavBar />
 
-        <Welcome name="Aswin Asok" role="user" stack="JavaScript"/>
+        <Welcome name="Aswin Asok" role="user" stack="JavaScript" />
 
         <HomeSideHeader label="Tasks" />
 
@@ -35,7 +35,9 @@ function UserHome() {
               <td>23-08-21</td>
               <td>23-08-21</td>
               <td>23-08-21</td>
-              <td><img className="uicon" src={Due} alt="Due Icon" /></td>
+              <td>
+                <img className="uicon" src={Due} alt="Due Icon" />
+              </td>
             </tr>
 
             <tr>
@@ -43,7 +45,9 @@ function UserHome() {
               <td>23-08-21</td>
               <td>23-08-21</td>
               <td>23-08-21</td>
-              <td><img className="uicon" src={Finish} alt="Finish Icon" /></td>
+              <td>
+                <img className="uicon" src={Finish} alt="Finish Icon" />
+              </td>
             </tr>
           </table>
         </div>
