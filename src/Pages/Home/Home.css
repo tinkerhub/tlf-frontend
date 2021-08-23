@@ -80,31 +80,14 @@ nline-1 {
   margin-top: 1.5rem;
 }
 
-.signup {
-  background-color: #f34e1e;
-  color: white;
-  border: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-  width: 25%;
-  border-radius: 8px;
-
+.buttons {
+  display: flex;
+  flex-direction: row;
   margin: 2rem;
   margin-left: 0rem;
   margin-right: 1rem;
 }
 
-.login {
-  background-color: #f34e1e;
-  color: white;
-  border: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-  width: 25%;
-  border-radius: 8px;
-}
 /* Left Side CSS Ends */
 
 /* Left Side Body CSS for smaller devices starts*/
@@ -125,14 +108,6 @@ nline-1 {
     letter-spacing: 0.5px;
     font-size: 1.2rem;
     margin-top: 1.5rem;
-  }
-
-  .signup {
-    width: 40%;
-  }
-
-  .login {
-    width: 40%;
   }
 }
 /* Left Side Body CSS for smaller devices ends*/
@@ -188,7 +163,6 @@ nline-1 {
     color: #4720b9;
     line-height: 2.5rem;
     letter-spacing: 0.05rem;
-    
   }
 
   .learn {

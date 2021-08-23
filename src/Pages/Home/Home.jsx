@@ -1,4 +1,5 @@
 import React from "react";
+import OrangeButton from "../../Components/OrangeButton";
 import "./Home.css";
 
 function Home() {
@@ -31,8 +32,8 @@ function Home() {
             </p>
 
             <div className="buttons">
-              <button className="signup">Sign Up</button>
-              <button className="login">Login</button>
+              <OrangeButton label="Sign Up" />
+              <OrangeButton label="Login" />
             </div>
           </div>
 
