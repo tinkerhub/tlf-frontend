@@ -77,3 +77,31 @@
     margin-top: 0.5rem;
   }
 }
+
+.table-container {
+  color: #4720b9;
+  margin-top: 3rem;
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+.table-header {
+  font-weight: 900;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 720px) {
+  .table-container {
+    color: #4720b9;
+    margin-top: 3rem;
+    width: 100vw;
+    margin-left: 0rem;
+  }
+
+  .table-header {
+    font-size: 0.75rem;
+  }
+}

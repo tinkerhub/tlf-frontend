@@ -26,6 +26,16 @@ function UserHome() {
         <div className="points-header">
           <p>330 Points</p>
         </div>
+
+        <div className="table-container">
+          <div className="table-header">
+            <p>Name</p>
+            <p>Assigned Date</p>
+            <p>Due Date</p>
+            <p>Completed Date</p>
+            <p>Status</p>
+          </div>
+        </div>
       </div>
     </div>
   );
