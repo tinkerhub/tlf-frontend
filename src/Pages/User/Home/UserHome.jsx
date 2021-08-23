@@ -22,6 +22,10 @@ function UserHome() {
         </div>
 
         <HomeSideHeader label="Tasks" />
+
+        <div className="points-header">
+          <p>330 Points</p>
+        </div>
       </div>
     </div>
   );
