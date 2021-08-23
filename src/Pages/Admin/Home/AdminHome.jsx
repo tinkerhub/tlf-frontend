@@ -16,6 +16,31 @@ function AdminHome() {
           <HomeSideHeader label="TLF Mentors" />
           <FilterHome />
         </div>
+
+        <div className="table-container">
+          <table id="aview">
+            <tr>
+              <th>Name</th>
+              <th>Task</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>23-08-21</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>23-08-21</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   );
