@@ -88,25 +88,24 @@
 /* Table CSS Starts */
 
 #tasks {
-  font-family: Arial, Helvetica, sans-serif;
   border: none;
   width: 100%;
 }
 
-#tasks td,
-#tasks th {
+#tasks td{
   border: none;
   padding: 8px;
   color: #4720b9;
   text-align: center;
-  font-weight: 900;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 #tasks th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #4720b9;
 }
 
@@ -114,27 +113,36 @@
 
 /* Table CSS Smaller Devices Starts*/
 
-#tasks {
-  font-family: Arial, Helvetica, sans-serif;
-  border: none;
-  width: 100%;
+@media only screen and (max-width: 720px) {
+  .table-container {
+    color: #4720b9;
+    margin-top: 2rem;
+    width: 98vw;
+    margin-left: 1vw;
+  }
+
+  #tasks {
+    border: none;
+    width: 100%;
+  }
+
+  #tasks td {
+    border: none;
+    padding: 0.3rem;
+    color: #4720b9;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.68rem;
+  }
+
+  #tasks th {
+    font-weight: 900;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4720b9;
+  }
 }
 
-#tasks td,
-#tasks th {
-  border: none;
-  padding: 12px;
-  color: #4720b9;
-  text-align: center;
-  white-space: nowrap;
-  font-weight: 900;
-}
-
-#tasks th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  font-size: 1.2rem;
-  color: #4720b9;
-}
 /* Table CSS Smaller Devices Ends*/
