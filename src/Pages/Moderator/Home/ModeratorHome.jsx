@@ -22,6 +22,28 @@ function ModeratorHome() {
             <div className="row2">Python</div>
           </div>
         </div>
+
+        <div className="table-container">
+          <table id="mview">
+            <tr>
+              <th>Name</th>
+              <th>Task</th>
+              <th>Edit</th>
+            </tr>
+
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>23-08-21</td>
+              <td>23-08-21</td>
+            </tr>
+
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>23-08-21</td>
+              <td>23-08-21</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   );

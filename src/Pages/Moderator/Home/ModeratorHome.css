@@ -51,3 +51,71 @@
     border-radius: 5px 0px 0px 5px;
   }
 }
+
+/* Table CSS Starts */
+.table-container {
+  color: #4720b9;
+  margin-top: 3rem;
+  width: 100vw;
+  margin-left: 0vw;
+}
+
+#mview {
+  border: none;
+  width: 100%;
+}
+
+#mview td {
+  border: none;
+  padding: 8px;
+  color: #4720b9;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+#mview th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #4720b9;
+}
+
+/* Table CSS Ends */
+
+/* Table CSS Smaller Devices Starts*/
+
+@media only screen and (max-width: 720px) {
+  .table-container {
+    color: #4720b9;
+    margin-top: 2rem;
+    width: 98vw;
+    margin-left: 1vw;
+  }
+
+  #mview {
+    border: none;
+    width: 100%;
+  }
+
+  #mview td {
+    border: none;
+    padding: 0.3rem;
+    color: #4720b9;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.68rem;
+  }
+
+  #mview th {
+    font-weight: 900;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4720b9;
+  }
+}
+
+/* Table CSS Smaller Devices Ends*/
