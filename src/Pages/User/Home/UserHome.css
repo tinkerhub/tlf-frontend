@@ -85,23 +85,56 @@
   margin-left: 5vw;
 }
 
-.table-header {
+/* Table CSS Starts */
+
+#tasks {
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  width: 100%;
+}
+
+#tasks td,
+#tasks th {
+  border: none;
+  padding: 8px;
+  color: #4720b9;
+  text-align: center;
   font-weight: 900;
+}
+
+#tasks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
   font-size: 1.1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  color: #4720b9;
 }
 
-@media only screen and (max-width: 720px) {
-  .table-container {
-    color: #4720b9;
-    margin-top: 3rem;
-    width: 100vw;
-    margin-left: 0rem;
-  }
+/* Table CSS Ends */
 
-  .table-header {
-    font-size: 0.75rem;
-  }
+/* Table CSS Smaller Devices Starts*/
+
+#tasks {
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  width: 100%;
 }
+
+#tasks td,
+#tasks th {
+  border: none;
+  padding: 12px;
+  color: #4720b9;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 900;
+}
+
+#tasks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4720b9;
+}
+/* Table CSS Smaller Devices Ends*/

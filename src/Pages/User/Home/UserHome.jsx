@@ -28,13 +28,30 @@ function UserHome() {
         </div>
 
         <div className="table-container">
-          <div className="table-header">
-            <p>Name</p>
-            <p>Assigned Date</p>
-            <p>Due Date</p>
-            <p>Completed Date</p>
-            <p>Status</p>
-          </div>
+          <table id="tasks">
+            <tr>
+              <th>Name</th>
+              <th>Assigned Date</th>
+              <th>Due Date</th>
+              <th>Completed Date</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>23-08-21</td>
+              <td>23-08-21</td>
+              <td>23-08-21</td>
+              <td>Completed</td>
+            </tr>
+
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>23-08-21</td>
+              <td>23-08-21</td>
+              <td>23-08-21</td>
+              <td>Completed</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
