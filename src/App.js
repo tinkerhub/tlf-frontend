@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
+import AdminHome from "./Pages/Admin/Home/AdminHome";
 import Home from "./Pages/Home/Home";
 import ModeratorHome from "./Pages/Moderator/Home/ModeratorHome";
 import UserHome from "./Pages/User/Home/UserHome";
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/moderator/home">
             <ModeratorHome />
+          </Route>
+          <Route exact path="/admin/home">
+            <AdminHome />
           </Route>
         </Switch>
       </Router>

@@ -1,0 +1,11 @@
+.admain-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ffc700;
+}
+
+.aorange-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

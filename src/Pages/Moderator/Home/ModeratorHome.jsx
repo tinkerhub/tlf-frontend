@@ -1,4 +1,5 @@
 import React from "react";
+import FilterHome from "../../../Components/FilterHome";
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
@@ -14,13 +15,7 @@ function ModeratorHome() {
         <div className="orange-bars">
           <HomeSideHeader label="TLF Mentors" />
 
-          <div className="filter">
-            <div className="row1">
-              <p>Flutter</p>
-              <p>JavaScript</p>
-            </div>
-            <div className="row2">Python</div>
-          </div>
+          <FilterHome />
         </div>
 
         <div className="table-container">
