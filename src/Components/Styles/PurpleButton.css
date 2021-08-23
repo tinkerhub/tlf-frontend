@@ -1,0 +1,24 @@
+.purplebutton{
+    background-color: var(--tertiary); 
+    border: 0px;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 15px;
+    width: 300px;
+    max-width: 55%; 
+}
+
+.purplebutton-text {
+    cursor: pointer;
+    padding: 10px 25px 10px 25px;
+    color: #FFFFFF;
+    font-size: 29px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .purplebutton-text {
+        padding: 5px 14px 5px 14px;
+        font-size: 21px;
+    }
+  }

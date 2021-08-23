@@ -2,4 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  --primary: #FFC700;
+  --secondary: #F34E1E;
+  --tertiary: #4720B9;
+  --white: #FBFBF6;
 }
