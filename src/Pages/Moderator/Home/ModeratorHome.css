@@ -77,3 +77,13 @@
 }
 
 /* Table CSS Smaller Devices Ends*/
+
+.eimage{
+  width: 2.25rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .eimage {
+    width: 1.55rem;
+  }
+}

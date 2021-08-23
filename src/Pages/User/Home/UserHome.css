@@ -97,3 +97,15 @@
 }
 
 /* Table CSS Smaller Devices Ends*/
+
+/* Icons */
+
+.uicon{
+  width: 2.25rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .uicon{
+    width: 1.55rem;
+  }
+}

@@ -5,6 +5,7 @@ import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
 
 import "./ModeratorHome.css";
+import Edit from "./Edit.png";
 
 function ModeratorHome() {
   return (
@@ -28,14 +29,34 @@ function ModeratorHome() {
 
             <tr>
               <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
+              <td>TLF Website</td>
+              <td>
+                <img className="eimage" src={Edit} alt="Edit Icon" />
+              </td>
             </tr>
 
             <tr>
               <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
+              <td>TLF Website</td>
+              <td>
+                <img className="eimage" src={Edit} alt="Edit Icon" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>TLF Website</td>
+              <td>
+                <img className="eimage" src={Edit} alt="Edit Icon" />
+              </td>
+            </tr>
+            
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>TLF Website</td>
+              <td>
+                <img className="eimage" src={Edit} alt="Edit Icon" />
+              </td>
             </tr>
           </table>
         </div>

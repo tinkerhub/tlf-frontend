@@ -5,6 +5,8 @@ import HomeSideHeader from "../../../Components/HomeSideHeader";
 import OrangeButton from "../../../Components/OrangeButton";
 import Welcome from "../../../Components/Welcome";
 import "./AdminHome.css";
+import Edit from "./Edit.png";
+import Delete from "./Delete.png";
 
 function AdminHome() {
   return (
@@ -29,15 +31,44 @@ function AdminHome() {
             <tr>
               <td>Lorem Ipsum</td>
               <td>23-08-21</td>
-              <td>Edit</td>
-              <td>Delete</td>
+              <td>
+                <img className="eimage" src={Edit} alt="Edit Icon" />
+              </td>
+              <td>
+                <img className="dimage" src={Delete} alt="Delete Icon" />
+              </td>
             </tr>
 
             <tr>
               <td>Lorem Ipsum</td>
               <td>23-08-21</td>
-              <td>Edit</td>
-              <td>Delete</td>
+              <td>
+                <img className="eimage" src={Edit} alt="Edit Icon" />
+              </td>
+              <td>
+                <img className="dimage" src={Delete} alt="Delete Icon" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>23-08-21</td>
+              <td>
+                <img className="eimage" src={Edit} alt="Edit Icon" />
+              </td>
+              <td>
+                <img className="dimage" src={Delete} alt="Delete Icon" />
+              </td>
+            </tr>
+            <tr>
+              <td>Lorem Ipsum</td>
+              <td>23-08-21</td>
+              <td>
+                <img className="eimage" src={Edit} alt="Edit Icon" />
+              </td>
+              <td>
+                <img className="dimage" src={Delete} alt="Delete Icon" />
+              </td>
             </tr>
           </table>
         </div>

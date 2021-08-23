@@ -77,3 +77,25 @@
 }
 
 /* Table CSS Smaller Devices Ends*/
+
+/* Icons */
+
+.eimage {
+  width: 2.25rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .eimage {
+    width: 1.55rem;
+  }
+}
+
+.dimage {
+  width: 2rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .dimage {
+    width: 1.1rem;
+  }
+}
