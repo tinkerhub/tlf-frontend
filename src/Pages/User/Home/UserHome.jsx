@@ -1,6 +1,7 @@
 import React from "react";
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
+import Welcome from "../../../Components/Welcome";
 import "./UserHome.css";
 
 function UserHome() {
@@ -9,17 +10,7 @@ function UserHome() {
       <div className="uhmain-container">
         <HomeNavBar />
 
-        <div className="welcome">
-          <div className="welcome-text">
-            <p className="welcome-name">
-              Welcome, <b>Aswin Asok</b>
-            </p>
-            <p className="tagline">
-              <b>JavaScript</b> Learning Facilitator.
-            </p>
-            <button className="create-btn">Create Task</button>
-          </div>
-        </div>
+        <Welcome name="Aswin Asok" role="user" stack="JavaScript"/>
 
         <HomeSideHeader label="Tasks" />
 
@@ -36,6 +27,7 @@ function UserHome() {
               <th>Completed Date</th>
               <th>Status</th>
             </tr>
+
             <tr>
               <td>Lorem Ipsum</td>
               <td>23-08-21</td>

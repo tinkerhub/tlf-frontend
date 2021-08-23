@@ -4,55 +4,6 @@
   background-color: #ffc700;
 }
 
-.welcome {
-  text-align: center;
-  margin-top: 2rem;
-  color: #4720b9;
-  line-height: 1.6rem;
-}
-
-.welcome-name {
-  font-size: 1.7rem;
-}
-
-@media only screen and (max-width: 720px) {
-  .welcome {
-    text-align: center;
-    margin-top: 1.5rem;
-    color: #4720b9;
-    line-height: 1.6rem;
-  }
-
-  .welcome-name {
-    font-size: 1.5rem;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-  }
-}
-
-.create-btn {
-  background-color: #f34e1e;
-  border: none;
-  color: white;
-  margin-top: 0.75rem;
-  padding: 0.4rem;
-  border-radius: 5px;
-  width: 8rem;
-  font-weight: 900;
-}
-
-@media only screen and (max-width: 720px) {
-  .create-btn {
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    padding: 0.4rem;
-    border-radius: 5px;
-    width: 7rem;
-  }
-}
-
 .points-header {
   border-radius: 0px 5px 5px 0px;
   font-size: 1.25rem;
@@ -92,7 +43,7 @@
   width: 100%;
 }
 
-#tasks td{
+#tasks td {
   border: none;
   padding: 8px;
   color: #4720b9;

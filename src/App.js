@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import Home from "./Pages/Home/Home";
+import ModeratorHome from "./Pages/Moderator/Home/ModeratorHome";
 import UserHome from "./Pages/User/Home/UserHome";
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
           </Route>
           <Route exact path="/user/home">
             <UserHome />
+          </Route>
+          <Route exact path="/moderator/home">
+            <ModeratorHome />
           </Route>
         </Switch>
       </Router>
