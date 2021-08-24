@@ -1,0 +1,111 @@
+.uhmain-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ffc700;
+}
+
+.points-header {
+  border-radius: 0px 5px 5px 0px;
+  font-size: 1.25rem;
+  color: white;
+  background-color: #4720b9;
+  width: 8rem;
+  padding: 0.2rem;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .points-header {
+    border-radius: 0px 5px 5px 0px;
+    font-size: 1rem;
+    color: white;
+    background-color: #4720b9;
+    width: 6rem;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+}
+
+.table-container {
+  color: #4720b9;
+  margin-top: 3rem;
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+/* Table CSS Starts */
+
+#tasks {
+  border: none;
+  width: 100%;
+}
+
+#tasks td {
+  border: none;
+  padding: 8px;
+  color: #4720b9;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+#tasks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #4720b9;
+}
+
+/* Table CSS Ends */
+
+/* Table CSS Smaller Devices Starts*/
+
+@media only screen and (max-width: 720px) {
+  .table-container {
+    color: #4720b9;
+    margin-top: 2rem;
+    width: 98vw;
+    margin-left: 1vw;
+  }
+
+  #tasks {
+    border: none;
+    width: 100%;
+  }
+
+  #tasks td {
+    border: none;
+    padding: 0.3rem;
+    color: #4720b9;
+    text-align: center;
+    white-space: normal;
+    font-size: 0.68rem;
+  }
+
+  #tasks th {
+    font-weight: 900;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4720b9;
+  }
+}
+
+/* Table CSS Smaller Devices Ends*/
+
+/* Icons */
+
+.uicon{
+  width: 2.25rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .uicon{
+    width: 1.55rem;
+  }
+}

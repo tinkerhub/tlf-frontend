@@ -1,0 +1,179 @@
+.body-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ffc700;
+}
+
+/* NavBar CSS Starts */
+
+.navbar {
+  width: 100vw;
+  background-color: #4720b9;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.nav-text {
+  padding: 1rem;
+  color: white;
+  line-height: 1.4rem;
+  text-align: center;
+}
+
+.nline-1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+nline-1 {
+  font-size: 0.8rem;
+}
+
+/* NavBar CSS Ends */
+
+/* NavBar CSS for smaller devices Starts*/
+@media only screen and (max-width: 720px) {
+  .body-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-text {
+    padding: 0.8rem;
+    color: white;
+    line-height: 1.4rem;
+    text-align: center;
+  }
+
+  .nline-1 {
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  nline-1 {
+    font-size: 0.5rem;
+  }
+}
+/* NavBar CSS for smaller devices Ends*/
+
+/* Left Side CSS Starts */
+.left-side {
+  width: 45%;
+  margin-left: 5%;
+  color: #4720b9;
+  margin-top: 8rem;
+}
+
+.main-text {
+  font-size: 3rem;
+  letter-spacing: 0.8px;
+  line-height: 3.5rem;
+}
+
+.sub-text {
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  margin-left: 0rem;
+  margin-right: 1rem;
+}
+
+/* Left Side CSS Ends */
+
+/* Left Side Body CSS for smaller devices starts*/
+@media only screen and (max-width: 720px) {
+  .left-side {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3rem;
+  }
+
+  .main-text {
+    font-size: 2rem;
+    letter-spacing: 0.8px;
+    line-height: 2.6rem;
+  }
+
+  .sub-text {
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+}
+/* Left Side Body CSS for smaller devices ends*/
+
+/* Right Side Body CSS Starts */
+.right-side {
+  margin-top: 9rem;
+  width: 50%;
+  position: relative;
+}
+
+.stacks {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #4720b9;
+  line-height: 4.6rem;
+  letter-spacing: 0.05rem;
+}
+
+.learn {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: #4720b9;
+  padding-left: 1.5rem;
+  font-size: 2rem;
+  border-radius: 8px 0px 0px 8px;
+  width: 21rem;
+  font-weight: 900;
+}
+
+.right-content {
+  position: absolute;
+  right: 0;
+}
+/* Right Side Body CSS Ends */
+
+@media only screen and (max-width: 720px) {
+  .main-container {
+    min-height: 160vh;
+  }
+
+  .right-side {
+    margin-top: 1rem;
+    width: 90%;
+    position: none;
+    margin-left: 10%;
+  }
+
+  .stacks {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #4720b9;
+    line-height: 2.5rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .learn {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: #4720b9;
+    padding-left: 1.5rem;
+    font-size: 1.6rem;
+    border-radius: 8px 0px 0px 8px;
+    width: 90vw;
+    font-weight: 900;
+  }
+}
