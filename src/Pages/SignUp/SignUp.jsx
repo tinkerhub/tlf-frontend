@@ -1,6 +1,5 @@
 import PurpleBox from "../../Components/PurpleBox";
 import LoginTextField from "../../Components/LoginTextField";
-import OrangeButton from "../../Components/OrangeButton";
 
 import "../Login/Login.css";
 
@@ -28,11 +27,11 @@ function SignUpPage() {
             <LoginTextField label="password" />
             <LoginTextField label="Flutter/Python/Javascript" />
           </div>
-          <div className="login-buttons">
-            <p className="login-text">
+          <div className="signup-buttons">
+            <p className="signup-text">
               Already have an account? <b>Login</b>
             </p>
-            <button className="lbtn">Create Account</button>
+            <button className="sbtn">Create Account</button>
           </div>
         </PurpleBox>
       </div>

@@ -107,3 +107,28 @@
     padding-left: 4%;
   }
 }
+
+/* SignUp Page CSS */
+.sbtn {
+  background-color: var(--secondary);
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+  width: 90%;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.signup-text {
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  padding-left: 12%;
+  margin-top: 5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .signup-text {
+    font-size: 0.8rem;
+  }
+}
