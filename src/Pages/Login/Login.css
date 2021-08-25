@@ -1,4 +1,4 @@
-.lcontainer {
+/* .lcontainer {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -6,13 +6,7 @@
     align-content: flex-end;
 }
 
-.login-form {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
+
 
 .help-text {
     color: var(--white);
@@ -26,4 +20,90 @@
 .help-text-bold {
     font-weight: 700;
     margin-left: 10px;
+} */
+
+.login-form {
+  width: 90%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.lcontainer {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 720px) {
+  .lcontainer {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+}
+
+.lleft-side {
+  margin-top: 2rem;
+  width: 40%;
+  margin-left: 5%;
+  color: var(--tertiary);
+}
+
+.lright-side {
+  width: 35%;
+}
+
+@media only screen and (max-width: 720px) {
+  .lleft-side {
+    margin-top: 2rem;
+    width: 100%;
+    color: var(--tertiary);
+  }
+
+  .lright-side {
+    width: 100%;
+  }
+}
+
+.lheader {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .lheader {
+    font-size: 1.8rem;
+  }
+}
+
+.lsubs {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  width: 90%;
+}
+
+.lbtn {
+  background-color: var(--secondary);
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+  width: 90%;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.login-text {
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  padding-left: 8%;
+}
+
+@media only screen and (max-width: 720px) {
+  .login-text {
+    font-size: 0.8rem;
+    padding-left: 4%;
+  }
 }
