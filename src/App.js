@@ -6,6 +6,8 @@ import AdminCreateTask from "./Pages/Admin/Create/CreateTask";
 import AdminHome from "./Pages/Admin/Home/AdminHome";
 import AdminUpdateTask from "./Pages/Admin/Update/UpdateTask";
 import Home from "./Pages/Home/Home";
+import LogInPage from "./Pages/Login/Login";
+import SignUpPage from "./Pages/SignUp/SignUp";
 import ModeratorHome from "./Pages/Moderator/Home/ModeratorHome";
 import UserAddTask from "./Pages/User/Create/AddTask";
 import UserHome from "./Pages/User/Home/UserHome";
@@ -39,6 +41,12 @@ function App() {
           </Route>
           <Route exact path="/user/update">
             <UserUpdateTask />
+          </Route>
+          <Route exact path="/login">
+            <LogInPage />
+          </Route>
+          <Route exact path="/signup">
+            <SignUpPage />
           </Route>
         </Switch>
       </Router>

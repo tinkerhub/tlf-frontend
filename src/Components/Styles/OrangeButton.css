@@ -9,6 +9,9 @@
   margin: 0.5rem;
   margin-left: 0rem;
   border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 720px) {

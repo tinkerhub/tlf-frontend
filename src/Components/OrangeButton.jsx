@@ -1,11 +1,9 @@
 import React from "react";
 import "./Styles/OrangeButton.css";
 
-function OrangeButton({ label }) {
+function OrangeButton({ label, style }) {
   return (
-    <div>
-      <button className="orange-button">{label}</button>
-    </div>
+    <div className="orange-button" style={style}>{label}</div>
   );
 }
 

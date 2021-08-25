@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 85vh;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.login-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.help-text {
+    color: var(--white);
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+.help-text-bold {
+    font-weight: 700;
+    margin-left: 10px;
+}
