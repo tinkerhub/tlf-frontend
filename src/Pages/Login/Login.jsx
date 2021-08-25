@@ -6,7 +6,7 @@ import "./Login.css";
 
 function LogInPage() {
     return (
-        <div className="container">
+        <div className="login-container">
             <PurpleBox>
                 <div className="login-form">
                     <div style={{ height: "68px" }} />
