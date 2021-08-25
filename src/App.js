@@ -36,6 +36,12 @@ function App() {
           <Route exact path="/admin/update">
             <AdminUpdateTask />
           </Route>
+          <Route exact path="/moderator/create">
+            <AdminCreateTask />
+          </Route>
+          <Route exact path="/moderator/update">
+            <AdminUpdateTask />
+          </Route>
           <Route exact path="/user/create">
             <UserAddTask />
           </Route>

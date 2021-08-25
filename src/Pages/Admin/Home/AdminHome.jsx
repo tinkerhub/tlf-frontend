@@ -32,7 +32,9 @@ function AdminHome() {
               <td>Lorem Ipsum</td>
               <td>23-08-21</td>
               <td>
-                <img className="eimage" src={Edit} alt="Edit Icon" />
+                <a href="/admin/update">
+                  <img className="eimage" src={Edit} alt="Edit Icon" />
+                </a>
               </td>
               <td>
                 <img className="dimage" src={Delete} alt="Delete Icon" />

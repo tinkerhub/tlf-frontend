@@ -32,8 +32,12 @@ function Home() {
             </p>
 
             <div className="buttons">
-              <OrangeButton label="Sign Up" />
-              <OrangeButton label="Login" />
+              <a href="/signup">
+                <OrangeButton label="Sign Up" />
+              </a>
+              <a href="/login">
+                <OrangeButton label="Login" />
+              </a>
             </div>
           </div>
 

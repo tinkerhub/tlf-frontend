@@ -36,7 +36,9 @@ function UserHome() {
               <td>23-08-21</td>
               <td>23-08-21</td>
               <td>
-                <img className="uicon" src={Due} alt="Due Icon" />
+                <a href="/user/update">
+                  <img className="uicon" src={Due} alt="Due Icon" />
+                </a>
               </td>
             </tr>
 

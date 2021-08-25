@@ -28,10 +28,14 @@ function SignUpPage() {
             <LoginTextField label="Flutter/Python/Javascript" />
           </div>
           <div className="signup-buttons">
-            <p className="signup-text">
-              Already have an account? <b>Login</b>
-            </p>
-            <button className="sbtn">Create Account</button>
+            <a href="/login">
+              <p className="signup-text">
+                Already have an account? <b>Login</b>
+              </p>
+            </a>
+            <a href="/user/home">
+              <button className="sbtn">Create Account</button>
+            </a>
           </div>
         </PurpleBox>
       </div>

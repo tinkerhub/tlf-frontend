@@ -13,7 +13,9 @@ function Welcome({ name, role, stack }) {
             <p className="tagline">
               <b>{stack}</b> Learning Facilitator.
             </p>
-            <button className="create-btn">Create Task</button>
+            <a href="/user/create">
+              <button className="create-btn">Create Task</button>
+            </a>
           </div>
         </div>
       </div>
@@ -29,7 +31,9 @@ function Welcome({ name, role, stack }) {
             <p className="tagline">
               Learning Facilitator Program <b> Moderator </b>
             </p>
-            <button className="create-btn">Create Task</button>
+            <a href="/moderator/create">
+              <button className="create-btn">Create Task</button>
+            </a>
           </div>
         </div>
       </div>
@@ -44,7 +48,9 @@ function Welcome({ name, role, stack }) {
           <p className="tagline">
             Learning Facilitator Program <b> Admin </b>
           </p>
-          <button className="create-btn">Create Task</button>
+          <a href="/admin/create">
+            <button className="create-btn">Create Task</button>
+          </a>
         </div>
       </div>
     );

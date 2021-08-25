@@ -27,10 +27,14 @@ function LogInPage() {
           </div>
 
           <div className="login-buttons">
-            <p className="login-text">
-              Don't have an account? <b>Create Account</b>
-            </p>
-            <button className="lbtn">Login </button>
+            <a href="/signup">
+              <p className="login-text">
+                Don't have an account? <b>Create Account</b>
+              </p>
+            </a>
+            <a href="/user/home">
+              <button className="lbtn">Login </button>
+            </a>
           </div>
         </PurpleBox>
       </div>

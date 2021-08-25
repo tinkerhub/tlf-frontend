@@ -31,7 +31,9 @@ function ModeratorHome() {
               <td>Lorem Ipsum</td>
               <td>TLF Website</td>
               <td>
-                <img className="eimage" src={Edit} alt="Edit Icon" />
+                <a href="/moderator/update">
+                  <img className="eimage" src={Edit} alt="Edit Icon" />
+                </a>
               </td>
             </tr>
 
@@ -50,7 +52,7 @@ function ModeratorHome() {
                 <img className="eimage" src={Edit} alt="Edit Icon" />
               </td>
             </tr>
-            
+
             <tr>
               <td>Lorem Ipsum</td>
               <td>TLF Website</td>

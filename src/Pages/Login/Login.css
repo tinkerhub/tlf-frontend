@@ -1,27 +1,3 @@
-/* .lcontainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-    align-content: flex-end;
-}
-
-
-
-.help-text {
-    color: var(--white);
-    margin-bottom: 8px;
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
-}
-.help-text-bold {
-    font-weight: 700;
-    margin-left: 10px;
-} */
-
 .login-form {
   width: 90%;
   padding-top: 1rem;
