@@ -12,6 +12,7 @@ import ModeratorHome from "./Pages/Moderator/Home/ModeratorHome";
 import UserAddTask from "./Pages/User/Create/AddTask";
 import UserHome from "./Pages/User/Home/UserHome";
 import UserUpdateTask from "./Pages/User/Update/UpdateTask";
+import SpecialSignUp from "./Pages/SpecialSignUp/SpecialSignUp";
 
 function App() {
   return (
@@ -53,6 +54,9 @@ function App() {
           </Route>
           <Route exact path="/signup">
             <SignUpPage />
+          </Route>
+          <Route exact path="/specialsignup">
+            <SpecialSignUp />
           </Route>
         </Switch>
       </Router>
