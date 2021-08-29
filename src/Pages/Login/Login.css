@@ -77,8 +77,18 @@
   padding-left: 8%;
 }
 
+.forgot-text {
+  color: var(--white);
+  margin-top: 0.4rem;
+  padding-left: 8%;
+}
+
 @media only screen and (max-width: 720px) {
   .login-text {
+    font-size: 0.8rem;
+    padding-left: 4%;
+  }
+  .forgot-text {
     font-size: 0.8rem;
     padding-left: 4%;
   }

@@ -35,6 +35,8 @@ function LogInPage() {
             <a href="/user/home">
               <button className="lbtn">Login </button>
             </a>
+
+            <p className="forgot-text">Forgot Password ?</p>
           </div>
         </PurpleBox>
       </div>
