@@ -13,6 +13,7 @@ import UserAddTask from "./Pages/User/Create/AddTask";
 import UserHome from "./Pages/User/Home/UserHome";
 import UserUpdateTask from "./Pages/User/Update/UpdateTask";
 import SpecialSignUp from "./Pages/SpecialSignUp/SpecialSignUp";
+import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
           </Route>
           <Route exact path="/specialsignup">
             <SpecialSignUp />
+          </Route>
+          <Route exact path="/forgotpassword">
+            <ForgotPassword />
           </Route>
         </Switch>
       </Router>
