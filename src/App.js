@@ -14,6 +14,7 @@ import UserHome from "./Pages/User/Home/UserHome";
 import UserUpdateTask from "./Pages/User/Update/UpdateTask";
 import SpecialSignUp from "./Pages/SpecialSignUp/SpecialSignUp";
 import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
+import Profile from "./Pages/User/Profile/Profile";
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
           </Route>
           <Route exact path="/user/update">
             <UserUpdateTask />
+          </Route>
+          <Route exact path="/user/profile">
+            <Profile />
           </Route>
           <Route exact path="/login">
             <LogInPage />
