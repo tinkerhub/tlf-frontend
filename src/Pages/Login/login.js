@@ -1,7 +1,7 @@
 import axios from "axios";
 import qs from "qs";
 
-export const login = (email, password) => {
+export const login = (email, password, setTokenReceived) => {
   const url = `${process.env.REACT_APP_BACKEND_DOMAIN}/auth/login`;
 
   const params = qs.stringify({
@@ -17,6 +17,7 @@ export const login = (email, password) => {
     })
     .then((res) => {
       localStorage.setItem("access_token", res.data.access_token);
+      setTokenReceived(true);
     })
     .catch(function (error) {
       console.log(error);

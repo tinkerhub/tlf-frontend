@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
@@ -17,6 +17,8 @@ import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import Profile from "./Pages/User/Profile/Profile";
 
 function App() {
+  const [tokenreceived, setTokenReceived] = useState(false);
+
   return (
     <div className="App">
       <Router>
@@ -25,7 +27,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/user/home">
-            <UserHome />
+            <UserHome tokenreceived={tokenreceived}/>
           </Route>
           <Route exact path="/moderator/home">
             <ModeratorHome />
@@ -55,7 +57,7 @@ function App() {
             <Profile />
           </Route>
           <Route exact path="/login">
-            <LogInPage />
+            <LogInPage setTokenReceived={setTokenReceived}/>
           </Route>
           <Route exact path="/signup">
             <SignUpPage />

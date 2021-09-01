@@ -8,7 +8,7 @@ import "./Login.css";
 
 import { login } from "./login";
 
-function LogInPage() {
+function LogInPage({ setTokenReceived }) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
@@ -43,9 +43,7 @@ function LogInPage() {
             <Link to="/user/home">
               <button
                 onClick={() => {
-                  console.log(email);
-                  console.log(password);
-                  login(email, password);
+                  login(email, password, setTokenReceived);
                 }}
                 className="lbtn"
               >

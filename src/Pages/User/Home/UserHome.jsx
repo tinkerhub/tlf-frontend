@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
@@ -6,7 +6,14 @@ import "./UserHome.css";
 import Due from "./Due.png";
 import Finish from "./Finish.png";
 
-function UserHome() {
+import { getProfile } from "./userhomeapi";
+
+function UserHome({ tokenreceived }) {
+  useEffect(() => {
+    if (tokenreceived) {
+      getProfile();
+    }
+  });
   return (
     <div>
       <div className="uhmain-container">
