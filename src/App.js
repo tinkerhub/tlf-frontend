@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
@@ -16,8 +16,17 @@ import SpecialSignUp from "./Pages/SpecialSignUp/SpecialSignUp";
 import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import Profile from "./Pages/User/Profile/Profile";
 
+import { getProfile } from "./Pages/User/Home/userhomeapi";
+
 function App() {
   const [tokenreceived, setTokenReceived] = useState(false);
+  const [profile, setProfile] = useState();
+
+  useEffect(() => {
+    if (tokenreceived) {
+      getProfile(setProfile);
+    }
+  }, [tokenreceived]);
 
   return (
     <div className="App">
@@ -27,7 +36,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/user/home">
-            <UserHome tokenreceived={tokenreceived}/>
+            <UserHome profile={profile} />
           </Route>
           <Route exact path="/moderator/home">
             <ModeratorHome />
@@ -57,7 +66,7 @@ function App() {
             <Profile />
           </Route>
           <Route exact path="/login">
-            <LogInPage setTokenReceived={setTokenReceived}/>
+            <LogInPage setTokenReceived={setTokenReceived} profile={profile} />
           </Route>
           <Route exact path="/signup">
             <SignUpPage />

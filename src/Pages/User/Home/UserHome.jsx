@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
@@ -6,17 +6,7 @@ import "./UserHome.css";
 import Due from "./Due.png";
 import Finish from "./Finish.png";
 
-import { getProfile } from "./userhomeapi";
-
-function UserHome({ tokenreceived }) {
-  const [profile, setProfile] = useState();
-
-  useEffect(() => {
-    if (tokenreceived) {
-      getProfile(setProfile);
-    }
-  }, [tokenreceived]);
-
+function UserHome({ profile }) {
   if (profile) {
     return (
       <div>

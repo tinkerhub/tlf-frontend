@@ -20,57 +20,59 @@ function AdminHome() {
 
         <div className="table-container">
           <table id="aview">
-            <tr>
-              <th>Name</th>
-              <th>Task</th>
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Task</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
 
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>
-                <a href="/admin/update">
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>23-08-21</td>
+                <td>
+                  <a href="/admin/update">
+                    <img className="eimage" src={Edit} alt="Edit Icon" />
+                  </a>
+                </td>
+                <td>
+                  <img className="dimage" src={Delete} alt="Delete Icon" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>23-08-21</td>
+                <td>
                   <img className="eimage" src={Edit} alt="Edit Icon" />
-                </a>
-              </td>
-              <td>
-                <img className="dimage" src={Delete} alt="Delete Icon" />
-              </td>
-            </tr>
+                </td>
+                <td>
+                  <img className="dimage" src={Delete} alt="Delete Icon" />
+                </td>
+              </tr>
 
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>
-                <img className="eimage" src={Edit} alt="Edit Icon" />
-              </td>
-              <td>
-                <img className="dimage" src={Delete} alt="Delete Icon" />
-              </td>
-            </tr>
-
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>
-                <img className="eimage" src={Edit} alt="Edit Icon" />
-              </td>
-              <td>
-                <img className="dimage" src={Delete} alt="Delete Icon" />
-              </td>
-            </tr>
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>
-                <img className="eimage" src={Edit} alt="Edit Icon" />
-              </td>
-              <td>
-                <img className="dimage" src={Delete} alt="Delete Icon" />
-              </td>
-            </tr>
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>23-08-21</td>
+                <td>
+                  <img className="eimage" src={Edit} alt="Edit Icon" />
+                </td>
+                <td>
+                  <img className="dimage" src={Delete} alt="Delete Icon" />
+                </td>
+              </tr>
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>23-08-21</td>
+                <td>
+                  <img className="eimage" src={Edit} alt="Edit Icon" />
+                </td>
+                <td>
+                  <img className="dimage" src={Delete} alt="Delete Icon" />
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>

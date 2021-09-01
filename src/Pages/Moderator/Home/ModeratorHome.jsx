@@ -21,45 +21,47 @@ function ModeratorHome() {
 
         <div className="table-container">
           <table id="mview">
-            <tr>
-              <th>Name</th>
-              <th>Task</th>
-              <th>Edit</th>
-            </tr>
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Task</th>
+                <th>Edit</th>
+              </tr>
 
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>TLF Website</td>
-              <td>
-                <a href="/moderator/update">
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>TLF Website</td>
+                <td>
+                  <a href="/moderator/update">
+                    <img className="eimage" src={Edit} alt="Edit Icon" />
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>TLF Website</td>
+                <td>
                   <img className="eimage" src={Edit} alt="Edit Icon" />
-                </a>
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>TLF Website</td>
-              <td>
-                <img className="eimage" src={Edit} alt="Edit Icon" />
-              </td>
-            </tr>
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>TLF Website</td>
+                <td>
+                  <img className="eimage" src={Edit} alt="Edit Icon" />
+                </td>
+              </tr>
 
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>TLF Website</td>
-              <td>
-                <img className="eimage" src={Edit} alt="Edit Icon" />
-              </td>
-            </tr>
-
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>TLF Website</td>
-              <td>
-                <img className="eimage" src={Edit} alt="Edit Icon" />
-              </td>
-            </tr>
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>TLF Website</td>
+                <td>
+                  <img className="eimage" src={Edit} alt="Edit Icon" />
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
