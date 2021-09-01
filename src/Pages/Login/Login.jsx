@@ -1,9 +1,17 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import PurpleBox from "../../Components/PurpleBox";
 import LoginTextField from "../../Components/LoginTextField";
 
 import "./Login.css";
 
+import { login } from "./login";
+
 function LogInPage() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
   return (
     <div className="lcontainer">
       <div className="lleft-side">
@@ -22,19 +30,28 @@ function LogInPage() {
       <div className="lright-side">
         <PurpleBox>
           <div className="login-form">
-            <LoginTextField label="email or username" />
-            <LoginTextField label="password" />
+            <LoginTextField label="email or username" setValue={setEmail} />
+            <LoginTextField label="password" setValue={setPassword} />
           </div>
 
           <div className="login-buttons">
-            <a href="/signup">
+            <Link to="/signup">
               <p className="login-text">
                 Don't have an account? <b>Create Account</b>
               </p>
-            </a>
-            <a href="/user/home">
-              <button className="lbtn">Login </button>
-            </a>
+            </Link>
+            <Link to="/user/home">
+              <button
+                onClick={() => {
+                  console.log(email);
+                  console.log(password);
+                  login(email, password);
+                }}
+                className="lbtn"
+              >
+                Login{" "}
+              </button>
+            </Link>
 
             <p className="forgot-text">Forgot Password ?</p>
           </div>
