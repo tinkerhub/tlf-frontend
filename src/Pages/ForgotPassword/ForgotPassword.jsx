@@ -2,7 +2,6 @@ import React from "react";
 
 import HomeNavBar from "../../Components/HomeNavBar";
 import PurpleButton from "../../Components/PurpleButton";
-import RedBox from "../../Components/RedBox";
 import TextField from "../../Components/TextField";
 
 import "./ForgotPassword.css";

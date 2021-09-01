@@ -12,7 +12,7 @@ export const login = (email, password) => {
   axios
     .post(url, params, {
       headers: {
-        "content-type": "application/x-www-form-urlencoded;charset=utf-8",
+        "content-type": "application/x-www-form-urlencoded",
       },
     })
     .then((res) => console.log(res.data))

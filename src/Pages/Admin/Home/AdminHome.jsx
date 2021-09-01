@@ -2,7 +2,6 @@ import React from "react";
 import FilterHome from "../../../Components/FilterHome";
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
-import OrangeButton from "../../../Components/OrangeButton";
 import Welcome from "../../../Components/Welcome";
 import "./AdminHome.css";
 import Edit from "./Edit.png";
