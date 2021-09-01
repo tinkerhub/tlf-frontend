@@ -45,7 +45,7 @@ function SignUpPage() {
                 Already have an account? <b>Login</b>
               </p>
             </Link>
-            <Link to="/user/home">
+            <Link to="/login">
               <button
                 onClick={() => {
                   signup(name, email, stack, password);
