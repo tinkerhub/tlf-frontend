@@ -15,9 +15,10 @@ export const login = (email, password) => {
         "content-type": "application/x-www-form-urlencoded",
       },
     })
-    .then((res) => console.log(res.data))
+    .then((res) => {
+      localStorage.setItem("access_token", res.data.access_token);
+    })
     .catch(function (error) {
       console.log(error);
-      console.log(params);
     });
 };
