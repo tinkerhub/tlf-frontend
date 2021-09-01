@@ -39,10 +39,10 @@ function App() {
             <UserHome profile={profile} />
           </Route>
           <Route exact path="/moderator/home">
-            <ModeratorHome />
+            <ModeratorHome profile={profile}/>
           </Route>
           <Route exact path="/admin/home">
-            <AdminHome />
+            <AdminHome profile={profile}/>
           </Route>
           <Route exact path="/admin/create">
             <AdminCreateTask />
