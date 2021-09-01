@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
@@ -9,17 +9,23 @@ import Finish from "./Finish.png";
 import { getProfile } from "./userhomeapi";
 
 function UserHome({ tokenreceived }) {
+  const [profile, setProfile] = useState();
+
   useEffect(() => {
     if (tokenreceived) {
-      getProfile();
+      getProfile(setProfile);
     }
-  });
+  }, [tokenreceived]);
   return (
     <div>
       <div className="uhmain-container">
         <HomeNavBar />
 
-        <Welcome name="Aswin Asok" role="user" stack="JavaScript" />
+        {profile ? (
+          <Welcome name={profile.name} role="user" stack={profile.stack} />
+        ) : (
+          <Welcome name="Aswin Asok" role="user" stack="JavaScript" />
+        )}
 
         <HomeSideHeader label="Tasks" />
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Styles/HomeNavBar.css";
 
 function HomeNavBar() {
@@ -11,9 +12,16 @@ function HomeNavBar() {
           </p>
           <p className="line-two">Learning Facilitator</p>
         </div>
-        <div className="righttext">
-          <p>Logout</p>
-        </div>
+        <Link to="/" style={{ color: '#FFF' }}>
+          <div
+            onClick={() => {
+              localStorage.removeItem("access_token");
+            }}
+            className="righttext"
+          >
+            <p>Logout</p>
+          </div>
+        </Link>
       </div>
     </div>
   );
