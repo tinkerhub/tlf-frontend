@@ -46,10 +46,6 @@ function SpecialSignUp() {
               <Link to="/user/home">
                 <button
                   onClick={() => {
-                    console.log(name);
-                    console.log(email);
-                    console.log(password);
-                    console.log(secret);
                     staffsignup(name, email, password, secret);
                   }}
                   className="sbtn"

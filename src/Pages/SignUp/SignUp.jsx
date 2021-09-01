@@ -6,6 +6,8 @@ import LoginTextField from "../../Components/LoginTextField";
 
 import "../Login/Login.css";
 
+import { signup } from "./signupapi";
+
 function SignUpPage() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -46,10 +48,7 @@ function SignUpPage() {
             <Link to="/user/home">
               <button
                 onClick={() => {
-                  console.log(name);
-                  console.log(email);
-                  console.log(password);
-                  console.log(stack);
+                  signup(name, email, stack, password);
                 }}
                 className="sbtn"
               >
