@@ -16,61 +16,66 @@ function UserHome({ tokenreceived }) {
       getProfile(setProfile);
     }
   }, [tokenreceived]);
-  return (
-    <div>
-      <div className="uhmain-container">
-        <HomeNavBar />
 
-        {profile ? (
-          <Welcome name={profile.name} role="user" stack={profile.stack} />
-        ) : (
-          <Welcome name="Aswin Asok" role="user" stack="JavaScript" />
-        )}
+  if (profile) {
+    return (
+      <div>
+        <div className="uhmain-container">
+          <HomeNavBar />
 
-        <HomeSideHeader label="Tasks" />
+          <Welcome
+            name={profile.name}
+            role={profile.role}
+            stack={profile.stack}
+          />
 
-        <div className="points-header">
-          <p>330 Points</p>
-        </div>
+          <HomeSideHeader label="Tasks" />
 
-        <div className="table-container">
-          <table id="tasks">
-            <tbody>
-              <tr>
-                <th>Name</th>
-                <th>Assigned Date</th>
-                <th>Due Date</th>
-                <th>Completed Date</th>
-                <th>Status</th>
-              </tr>
+          <div className="points-header">
+            <p>330 Points</p>
+          </div>
 
-              <tr>
-                <td>Lorem Ipsum</td>
-                <td>23-08-21</td>
-                <td>23-08-21</td>
-                <td>23-08-21</td>
-                <td>
-                  <a href="/user/update">
-                    <img className="uicon" src={Due} alt="Due Icon" />
-                  </a>
-                </td>
-              </tr>
+          <div className="table-container">
+            <table id="tasks">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Assigned Date</th>
+                  <th>Due Date</th>
+                  <th>Completed Date</th>
+                  <th>Status</th>
+                </tr>
 
-              <tr>
-                <td>Lorem Ipsum</td>
-                <td>23-08-21</td>
-                <td>23-08-21</td>
-                <td>23-08-21</td>
-                <td>
-                  <img className="uicon" src={Finish} alt="Finish Icon" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                <tr>
+                  <td>Lorem Ipsum</td>
+                  <td>23-08-21</td>
+                  <td>23-08-21</td>
+                  <td>23-08-21</td>
+                  <td>
+                    <a href="/user/update">
+                      <img className="uicon" src={Due} alt="Due Icon" />
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Lorem Ipsum</td>
+                  <td>23-08-21</td>
+                  <td>23-08-21</td>
+                  <td>23-08-21</td>
+                  <td>
+                    <img className="uicon" src={Finish} alt="Finish Icon" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <div>Loading....</div>;
+  }
 }
 
 export default UserHome;

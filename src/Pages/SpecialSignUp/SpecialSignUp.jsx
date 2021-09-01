@@ -43,16 +43,47 @@ function SpecialSignUp() {
                   Already have an account? <b>Login</b>
                 </p>
               </Link>
-              <Link to="/user/home">
-                <button
-                  onClick={() => {
-                    staffsignup(name, email, password, secret);
-                  }}
-                  className="sbtn"
-                >
-                  Create Account
-                </button>
-              </Link>
+
+              {(() => {
+                if (secret == "tlf2021admins") {
+                  return (
+                    <Link to="/admin/home">
+                      <button
+                        onClick={() => {
+                          staffsignup(name, email, password, secret);
+                        }}
+                        className="sbtn"
+                      >
+                        Create Account
+                      </button>
+                    </Link>
+                  );
+                } else if (secret == "tlf2021moderators") {
+                  return (
+                    <Link to="/moderator/home">
+                      <button
+                        onClick={() => {
+                          staffsignup(name, email, password, secret);
+                        }}
+                        className="sbtn"
+                      >
+                        Create Account
+                      </button>
+                    </Link>
+                  );
+                } else {
+                  return (
+                    <button
+                      onClick={() => {
+                        staffsignup(name, email, password, secret);
+                      }}
+                      className="sbtn"
+                    >
+                      Create Account
+                    </button>
+                  );
+                }
+              })()}
             </div>
           </PurpleBox>
         </div>

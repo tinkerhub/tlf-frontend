@@ -2,7 +2,7 @@ import React from "react";
 import "./Styles/Welcome.css";
 
 function Welcome({ name, role, stack }) {
-  if (role === "user") {
+  if (role === "USER") {
     return (
       <div>
         <div className="welcome">
@@ -20,7 +20,7 @@ function Welcome({ name, role, stack }) {
         </div>
       </div>
     );
-  } else if (role === "moderator") {
+  } else if (role === "MODERATOR") {
     return (
       <div>
         <div className="welcome">
@@ -38,7 +38,7 @@ function Welcome({ name, role, stack }) {
         </div>
       </div>
     );
-  } else if (role === "admin") {
+  } else if (role === "ADMIN") {
     return (
       <div className="welcome">
         <div className="welcome-text">
