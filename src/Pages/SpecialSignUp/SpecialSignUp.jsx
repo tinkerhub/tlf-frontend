@@ -44,46 +44,16 @@ function SpecialSignUp() {
                 </p>
               </Link>
 
-              {(() => {
-                if (secret == "tlf2021admins") {
-                  return (
-                    <Link to="/admin/home">
-                      <button
-                        onClick={() => {
-                          staffsignup(name, email, password, secret);
-                        }}
-                        className="sbtn"
-                      >
-                        Create Account
-                      </button>
-                    </Link>
-                  );
-                } else if (secret == "tlf2021moderators") {
-                  return (
-                    <Link to="/moderator/home">
-                      <button
-                        onClick={() => {
-                          staffsignup(name, email, password, secret);
-                        }}
-                        className="sbtn"
-                      >
-                        Create Account
-                      </button>
-                    </Link>
-                  );
-                } else {
-                  return (
-                    <button
-                      onClick={() => {
-                        staffsignup(name, email, password, secret);
-                      }}
-                      className="sbtn"
-                    >
-                      Create Account
-                    </button>
-                  );
-                }
-              })()}
+              <Link to="/login">
+                <button
+                  onClick={() => {
+                    staffsignup(name, email, password, secret);
+                  }}
+                  className="sbtn"
+                >
+                  Create Account
+                </button>
+              </Link>
             </div>
           </PurpleBox>
         </div>
