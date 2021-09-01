@@ -22,35 +22,37 @@ function UserHome() {
 
         <div className="table-container">
           <table id="tasks">
-            <tr>
-              <th>Name</th>
-              <th>Assigned Date</th>
-              <th>Due Date</th>
-              <th>Completed Date</th>
-              <th>Status</th>
-            </tr>
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Assigned Date</th>
+                <th>Due Date</th>
+                <th>Completed Date</th>
+                <th>Status</th>
+              </tr>
 
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
-              <td>
-                <a href="/user/update">
-                  <img className="uicon" src={Due} alt="Due Icon" />
-                </a>
-              </td>
-            </tr>
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>23-08-21</td>
+                <td>23-08-21</td>
+                <td>23-08-21</td>
+                <td>
+                  <a href="/user/update">
+                    <img className="uicon" src={Due} alt="Due Icon" />
+                  </a>
+                </td>
+              </tr>
 
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
-              <td>
-                <img className="uicon" src={Finish} alt="Finish Icon" />
-              </td>
-            </tr>
+              <tr>
+                <td>Lorem Ipsum</td>
+                <td>23-08-21</td>
+                <td>23-08-21</td>
+                <td>23-08-21</td>
+                <td>
+                  <img className="uicon" src={Finish} alt="Finish Icon" />
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>

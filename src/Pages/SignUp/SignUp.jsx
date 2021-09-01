@@ -1,9 +1,16 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import PurpleBox from "../../Components/PurpleBox";
 import LoginTextField from "../../Components/LoginTextField";
 
 import "../Login/Login.css";
 
 function SignUpPage() {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [stack, setStack] = useState();
   return (
     <div className="lcontainer">
       <div className="lleft-side">
@@ -22,20 +29,33 @@ function SignUpPage() {
       <div className="lright-side">
         <PurpleBox>
           <div className="login-form">
-            <LoginTextField label="Full Name" />
-            <LoginTextField label="email or username" />
-            <LoginTextField label="password" />
-            <LoginTextField label="Flutter/Python/Javascript" />
+            <LoginTextField label="Full Name" setValue={setName} />
+            <LoginTextField label="email" setValue={setEmail} />
+            <LoginTextField label="password" setValue={setPassword} />
+            <LoginTextField
+              label="Flutter/Python/Javascript"
+              setValue={setStack}
+            />
           </div>
           <div className="signup-buttons">
-            <a href="/login">
+            <Link to="/login">
               <p className="signup-text">
                 Already have an account? <b>Login</b>
               </p>
-            </a>
-            <a href="/user/home">
-              <button className="sbtn">Create Account</button>
-            </a>
+            </Link>
+            <Link to="/user/home">
+              <button
+                onClick={() => {
+                  console.log(name);
+                  console.log(email);
+                  console.log(password);
+                  console.log(stack);
+                }}
+                className="sbtn"
+              >
+                Create Account
+              </button>
+            </Link>
           </div>
         </PurpleBox>
       </div>
