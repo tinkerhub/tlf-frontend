@@ -12,7 +12,7 @@ export const getProfile = async (setProfile) => {
     })
     .then(function (response) {
       console.log(response.data);
+      localStorage.setItem("profile", JSON.stringify(response.data));
       setProfile(response.data);
     });
 };
-

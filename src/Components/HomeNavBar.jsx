@@ -12,10 +12,11 @@ function HomeNavBar() {
           </p>
           <p className="line-two">Learning Facilitator</p>
         </div>
-        <Link to="/" style={{ color: '#FFF' }}>
+        <Link to="/" style={{ color: "#FFF" }}>
           <div
             onClick={() => {
               localStorage.removeItem("access_token");
+              localStorage.removeItem("profile");
             }}
             className="righttext"
           >

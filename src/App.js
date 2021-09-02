@@ -26,6 +26,13 @@ function App() {
     if (tokenreceived) {
       getProfile(setProfile);
     }
+
+    if (
+      localStorage.getItem("profile") &&
+      localStorage.getItem("access_token")
+    ) {
+      setProfile(JSON.parse(localStorage.getItem("profile")));
+    }
   }, [tokenreceived]);
 
   return (
