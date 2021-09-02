@@ -6,7 +6,7 @@ import LoginTextField from "../../Components/LoginTextField";
 
 import "./Login.css";
 
-import { login } from "./login";
+import { login } from "./loginapi";
 
 function LogInPage({ setTokenReceived, profile }) {
   const [email, setEmail] = useState();
