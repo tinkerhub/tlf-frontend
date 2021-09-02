@@ -39,10 +39,10 @@ function App() {
             <UserHome profile={profile} />
           </Route>
           <Route exact path="/moderator/home">
-            <ModeratorHome profile={profile}/>
+            <ModeratorHome profile={profile} />
           </Route>
           <Route exact path="/admin/home">
-            <AdminHome profile={profile}/>
+            <AdminHome profile={profile} />
           </Route>
           <Route exact path="/admin/create">
             <AdminCreateTask />
@@ -63,7 +63,7 @@ function App() {
             <UserUpdateTask />
           </Route>
           <Route exact path="/user/profile">
-            <Profile />
+            <Profile profile={profile} />
           </Route>
           <Route exact path="/login">
             <LogInPage setTokenReceived={setTokenReceived} profile={profile} />

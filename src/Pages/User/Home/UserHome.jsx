@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
@@ -11,12 +13,13 @@ function UserHome({ profile }) {
       <div>
         <div className="uhmain-container">
           <HomeNavBar />
-
-          <Welcome
-            name={profile.name}
-            role={profile.role}
-            stack={profile.stack}
-          />
+          <Link to="/user/profile/">
+            <Welcome
+              name={profile.name}
+              role={profile.role}
+              stack={profile.stack}
+            />
+          </Link>
 
           <HomeSideHeader label="Tasks" />
 
