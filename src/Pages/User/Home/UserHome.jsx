@@ -1,4 +1,3 @@
-
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
@@ -22,7 +21,7 @@ function UserHome({ profile }) {
           <HomeSideHeader label="Tasks" />
 
           <div className="points-header">
-            <p>330 Points</p>
+            <p>{profile.points} Points</p>
           </div>
 
           <div className="table-container">
@@ -36,27 +35,19 @@ function UserHome({ profile }) {
                   <th>Status</th>
                 </tr>
 
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>23-08-21</td>
-                  <td>23-08-21</td>
-                  <td>23-08-21</td>
-                  <td>
-                    <a href="/user/update">
-                      <img className="uicon" src={Due} alt="Due Icon" />
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>23-08-21</td>
-                  <td>23-08-21</td>
-                  <td>23-08-21</td>
-                  <td>
-                    <img className="uicon" src={Finish} alt="Finish Icon" />
-                  </td>
-                </tr>
+                {profile.activities.map((activity) => (
+                  <tr>
+                    <td>{activity.name}</td>
+                    <td>{activity.assign_date}</td>
+                    <td>{activity.due_date}</td>
+                    <td>{activity.completed_date}</td>
+                    <td>
+                      <a href="/user/update">
+                        <img className="uicon" src={Due} alt="Due Icon" />
+                      </a>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

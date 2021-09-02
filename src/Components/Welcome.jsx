@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Styles/Welcome.css";
 
 function Welcome({ name, role, stack }) {
@@ -13,9 +14,9 @@ function Welcome({ name, role, stack }) {
             <p className="tagline">
               <b>{stack}</b> Learning Facilitator.
             </p>
-            <a href="/user/create">
+            <Link to="/user/create">
               <button className="create-btn">Create Task</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -31,9 +32,9 @@ function Welcome({ name, role, stack }) {
             <p className="tagline">
               Learning Facilitator Program <b> Moderator </b>
             </p>
-            <a href="/moderator/create">
+            <Link to="/moderator/create">
               <button className="create-btn">Create Task</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -48,9 +49,9 @@ function Welcome({ name, role, stack }) {
           <p className="tagline">
             Learning Facilitator Program <b> Admin </b>
           </p>
-          <a href="/admin/create">
+          <Link to="/admin/create">
             <button className="create-btn">Create Task</button>
-          </a>
+          </Link>
         </div>
       </div>
     );

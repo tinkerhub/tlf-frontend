@@ -15,3 +15,4 @@ export const getProfile = async (setProfile) => {
       setProfile(response.data);
     });
 };
+
