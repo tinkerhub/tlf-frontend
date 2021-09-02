@@ -33,15 +33,11 @@ function App() {
           <Route exact path="/admin/create">
             <AdminCreateTask />
           </Route>
-          <Route exact path="/admin/update">
-            <AdminUpdateTask />
-          </Route>
+          <Route exact path="/admin/update/:id" render={(props) => <AdminUpdateTask {...props} />} />
           <Route exact path="/user/create">
             <UserAddTask />
           </Route>
-          <Route exact path="/user/update">
-            <UserUpdateTask />
-          </Route>
+          <Route exact path="/user/update/:id" render={(props) => <UserUpdateTask {...props} />} />
           <Route exact path="/login">
             <LogInPage />
           </Route>
