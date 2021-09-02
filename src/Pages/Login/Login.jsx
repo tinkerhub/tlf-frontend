@@ -32,7 +32,7 @@ function LogInPage({ setTokenReceived, profile }) {
           <PurpleBox>
             <div className="login-form">
               <LoginTextField label="email or username" setValue={setEmail} />
-              <LoginTextField label="password" setValue={setPassword} />
+              <LoginTextField label="password" type="password" setValue={setPassword} />
             </div>
 
             <div className="login-buttons">
@@ -69,7 +69,7 @@ function LogInPage({ setTokenReceived, profile }) {
                       </button>
                     </Link>
                   );
-                } else if(profile.role === "USER") {
+                } else if (profile.role === "USER") {
                   return (
                     <Link to="/user/home">
                       <button
@@ -111,7 +111,7 @@ function LogInPage({ setTokenReceived, profile }) {
           <PurpleBox>
             <div className="login-form">
               <LoginTextField label="email or username" setValue={setEmail} />
-              <LoginTextField label="password" setValue={setPassword} />
+              <LoginTextField label="password" type="password" setValue={setPassword} />
             </div>
 
             <div className="login-buttons">

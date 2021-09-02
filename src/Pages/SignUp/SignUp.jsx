@@ -33,8 +33,9 @@ function SignUpPage() {
           <div className="login-form">
             <LoginTextField label="Full Name" setValue={setName} />
             <LoginTextField label="email" setValue={setEmail} />
-            <LoginTextField label="password" setValue={setPassword} />
+            <LoginTextField label="password" type="password" setValue={setPassword} />
             <LoginTextField
+              type="dropdown"
               label="Flutter/Python/Javascript"
               setValue={setStack}
             />
