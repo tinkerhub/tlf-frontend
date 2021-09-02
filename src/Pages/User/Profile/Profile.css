@@ -1,0 +1,107 @@
+.profile-body {
+  margin-top: 3rem;
+}
+
+.profile-main {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .profile-body {
+    margin-top: 1rem;
+  }
+  .profile-main {
+    margin-top: 3rem;
+  }
+}
+
+.profile-image {
+  width: 7rem;
+}
+
+.profile-text {
+  color: var(--tertiary);
+}
+
+.profile-name {
+  font-size: 1.5rem;
+}
+
+.profile-table{
+    margin-bottom: 5rem;
+}
+
+.profile-pass {
+  background: var(--secondary);
+  color: white;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Table CSS */
+
+.table-header {
+  color: var(--tertiary);
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 5rem;
+}
+
+/* Table CSS Starts */
+
+#pro-task {
+  border: none;
+  width: 100%;
+}
+
+#pro-task td {
+  border: none;
+  padding: 8px;
+  color: #4720b9;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+#pro-task th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4720b9;
+}
+
+/* Table CSS Ends */
+
+/* Table CSS Smaller Devices Starts*/
+
+@media only screen and (max-width: 720px) {
+  #pro-task {
+    border: none;
+    width: 100%;
+  }
+
+  #pro-task td {
+    border: none;
+    padding: 0.3rem;
+    color: #4720b9;
+    text-align: center;
+    white-space: normal;
+    font-size: 0.68rem;
+  }
+
+  #pro-task th {
+    font-weight: 900;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4720b9;
+  }
+}
+
+/* Table CSS Smaller Devices Ends*/

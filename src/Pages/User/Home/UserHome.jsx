@@ -1,4 +1,5 @@
-import React from "react";
+import { Link } from "react-router-dom";
+
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 import Welcome from "../../../Components/Welcome";
@@ -6,54 +7,59 @@ import "./UserHome.css";
 import Due from "./Due.png";
 import Finish from "./Finish.png";
 
-function UserHome() {
-  return (
-    <div>
-      <div className="uhmain-container">
-        <HomeNavBar />
+function UserHome({ profile }) {
+  if (profile) {
+    return (
+      <div>
+        <div className="uhmain-container">
+          <HomeNavBar />
+          <Link to="/user/profile/">
+            <Welcome
+              name={profile.name}
+              role={profile.role}
+              stack={profile.stack}
+            />
+          </Link>
 
-        <Welcome name="Aswin Asok" role="user" stack="JavaScript" />
+          <HomeSideHeader label="Tasks" />
 
-        <HomeSideHeader label="Tasks" />
+          <div className="points-header">
+            <p>{profile.points} Points</p>
+          </div>
 
-        <div className="points-header">
-          <p>330 Points</p>
-        </div>
+          <div className="table-container">
+            <table id="tasks">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Assigned Date</th>
+                  <th>Due Date</th>
+                  <th>Completed Date</th>
+                  <th>Status</th>
+                </tr>
 
-        <div className="table-container">
-          <table id="tasks">
-            <tr>
-              <th>Name</th>
-              <th>Assigned Date</th>
-              <th>Due Date</th>
-              <th>Completed Date</th>
-              <th>Status</th>
-            </tr>
-
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
-              <td>
-                <img className="uicon" src={Due} alt="Due Icon" />
-              </td>
-            </tr>
-
-            <tr>
-              <td>Lorem Ipsum</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
-              <td>23-08-21</td>
-              <td>
-                <img className="uicon" src={Finish} alt="Finish Icon" />
-              </td>
-            </tr>
-          </table>
+                {profile.activities.map((activity) => (
+                  <tr>
+                    <td>{activity.name}</td>
+                    <td>{activity.assign_date}</td>
+                    <td>{activity.due_date}</td>
+                    <td>{activity.completed_date}</td>
+                    <td>
+                      <a href="/user/update">
+                        <img className="uicon" src={Due} alt="Due Icon" />
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <div>Loading....</div>;
+  }
 }
 
 export default UserHome;

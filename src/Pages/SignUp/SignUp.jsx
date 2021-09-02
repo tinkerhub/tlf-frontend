@@ -1,26 +1,66 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import PurpleBox from "../../Components/PurpleBox";
 import LoginTextField from "../../Components/LoginTextField";
-import OrangeButton from "../../Components/OrangeButton";
 
 import "../Login/Login.css";
 
+import { signup } from "./signupapi";
+
 function SignUpPage() {
-    return (
-        <div className="lcontainer">
-            <PurpleBox>
-                <div className="login-form">
-                    <div style={{ height: "28px" }} />
-                    <LoginTextField label="Full Name" />
-                    <LoginTextField label="email or username" />
-                    <LoginTextField label="password" />
-                    <LoginTextField label="Flutter/Python/Javascript" />
-                    <div style={{ height: "60px" }} />
-                    <p className="help-text">Already have an account? <p className="help-text-bold">Login</p> </p>
-                    <OrangeButton label="Create Account" style={{ width: "97%", margin: 0, fontSize: "1.4rem" }} />
-                </div>
-            </PurpleBox>
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [stack, setStack] = useState();
+  return (
+    <div className="lcontainer">
+      <div className="lleft-side">
+        <div className="lcontents">
+          <p className="lheader">
+            Welcome to <b>TinkerHub Learning Facilitator Program.</b>
+          </p>
+          <p className="lsubs">
+            TinkerHub Learning Facilitators Program 2021 is a{" "}
+            <b>6-month learning initiative by the TinkerHub Foundation</b> to
+            create a pool of mentors in<b> 3 different stacks</b> for various
+            learning programs, curating courses, one-to-one mentoring, etc.
+          </p>
         </div>
-    );
+      </div>
+      <div className="lright-side">
+        <PurpleBox>
+          <div className="login-form">
+            <LoginTextField label="Full Name" setValue={setName} />
+            <LoginTextField label="email" setValue={setEmail} />
+            <LoginTextField label="password" type="password" setValue={setPassword} />
+            <LoginTextField
+              type="dropdown"
+              label="Flutter/Python/Javascript"
+              setValue={setStack}
+            />
+          </div>
+          <div className="signup-buttons">
+            <Link to="/login">
+              <p className="signup-text">
+                Already have an account? <b>Login</b>
+              </p>
+            </Link>
+            <Link to="/login">
+              <button
+                onClick={() => {
+                  signup(name, email, stack, password);
+                }}
+                className="sbtn"
+              >
+                Create Account
+              </button>
+            </Link>
+          </div>
+        </PurpleBox>
+      </div>
+    </div>
+  );
 }
 
 export default SignUpPage;

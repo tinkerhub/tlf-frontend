@@ -1,12 +1,10 @@
 .login-textfield-container{
     display: flex;
     flex-direction: column;
-    margin: 8px 0px;
-    width: 800px;
-    max-width: 100%;
+    width: 100%;
 }
 
-input[type="login-textfield"]{
+input[type="login-textfield"], input[type="password"], select{
     display: flex;
     max-width: 100%;
     height: 56px;
