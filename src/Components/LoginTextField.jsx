@@ -6,7 +6,7 @@ function LoginTextField(props) {
   return (
     <div className="login-textfield-container">
       {type === "dropdown"
-        ? <select name="status" onChange={(event) => {
+        ? <select name="login" onChange={(event) => {
           setValue(event.target.value);
         }}  >
           <option value="none" selected disabled hidden>

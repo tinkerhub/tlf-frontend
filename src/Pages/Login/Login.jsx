@@ -5,109 +5,61 @@ import PurpleBox from "../../Components/PurpleBox";
 import LoginTextField from "../../Components/LoginTextField";
 
 import "./Login.css";
-
 import { login } from "./loginapi";
+import { getProfile } from "../User/Home/userhomeapi";
 
 function LogInPage({ setTokenReceived, profile }) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  if (profile) {
-    return (
-      <div className="lcontainer">
-        <div className="lleft-side">
-          <div className="lcontents">
-            <p className="lheader">
-              Welcome to <b>TinkerHub Learning Facilitator Program.</b>
-            </p>
-            <p className="lsubs">
-              TinkerHub Learning Facilitators Program 2021 is a{" "}
-              <b>6-month learning initiative by the TinkerHub Foundation</b> to
-              create a pool of mentors in<b> 3 different stacks</b> for various
-              learning programs, curating courses, one-to-one mentoring, etc.
-            </p>
-          </div>
-        </div>
-        <div className="lright-side">
-          <PurpleBox>
-            <div className="login-form">
-              <LoginTextField label="email or username" setValue={setEmail} />
-              <LoginTextField label="password" type="password" setValue={setPassword} />
-            </div>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let res = await login(email, password, setTokenReceived);
+    if (res === "error") {
+      alert("Login failed");
+      window.location.reload();
+    }
 
-            <div className="login-buttons">
-              <Link to="/signup">
-                <p className="login-text">
-                  Don't have an account? <b>Create Account</b>
-                </p>
-              </Link>
+    else if (res === "success") {
+      setTokenReceived(true);
+      profile = await getProfile();
 
-              {(() => {
-                if (profile.role === "ADMIN") {
-                  return (
-                    <Link to="/admin/home">
-                      <button
-                        onClick={() => {
-                          login(email, password, setTokenReceived);
-                        }}
-                        className="lbtn"
-                      >
-                        Login{" "}
-                      </button>
-                    </Link>
-                  );
-                } else if (profile.role === "MODERATOR") {
-                  return (
-                    <Link to="/moderator/home">
-                      <button
-                        onClick={() => {
-                          login(email, password, setTokenReceived);
-                        }}
-                        className="lbtn"
-                      >
-                        Login{" "}
-                      </button>
-                    </Link>
-                  );
-                } else if (profile.role === "USER") {
-                  return (
-                    <Link to="/user/home">
-                      <button
-                        onClick={() => {
-                          login(email, password, setTokenReceived);
-                        }}
-                        className="lbtn"
-                      >
-                        Login{" "}
-                      </button>
-                    </Link>
-                  );
-                }
-              })()}
+      if (!profile) {
+      }
+      else if (profile === "error") {
+        alert("Login failed");
+      }
+      else if (profile.role === "ADMIN") {
 
-              <p className="forgot-text">Forgot Password ?</p>
-            </div>
-          </PurpleBox>
+        window.location.replace("/admin/home");
+
+      } else if (profile.role === "MODERATOR") {
+        window.location.replace("/moderator/home");
+
+      } else if (profile.role === "USER") {
+        window.location.replace("/user/home");
+      }
+    }
+  }
+
+
+  return (
+    <div className="lcontainer">
+      <div className="lleft-side">
+        <div className="lcontents">
+          <p className="lheader">
+            Welcome to <b>TinkerHub Learning Facilitator Program.</b>
+          </p>
+          <p className="lsubs">
+            TinkerHub Learning Facilitators Program 2021 is a{" "}
+            <b>6-month learning initiative by the TinkerHub Foundation</b> to
+            create a pool of mentors in<b> 3 different stacks</b> for various
+            learning programs, curating courses, one-to-one mentoring, etc.
+          </p>
         </div>
       </div>
-    );
-  } else {
-    return (
-      <div className="lcontainer">
-        <div className="lleft-side">
-          <div className="lcontents">
-            <p className="lheader">
-              Welcome to <b>TinkerHub Learning Facilitator Program.</b>
-            </p>
-            <p className="lsubs">
-              TinkerHub Learning Facilitators Program 2021 is a{" "}
-              <b>6-month learning initiative by the TinkerHub Foundation</b> to
-              create a pool of mentors in<b> 3 different stacks</b> for various
-              learning programs, curating courses, one-to-one mentoring, etc.
-            </p>
-          </div>
-        </div>
-        <div className="lright-side">
+      <div className="lright-side">
+        <form onSubmit={handleSubmit} >
           <PurpleBox>
             <div className="login-form">
               <LoginTextField label="email or username" setValue={setEmail} />
@@ -122,9 +74,6 @@ function LogInPage({ setTokenReceived, profile }) {
               </Link>
 
               <button
-                onClick={() => {
-                  login(email, password, setTokenReceived);
-                }}
                 className="lbtn"
               >
                 Login{" "}
@@ -133,10 +82,10 @@ function LogInPage({ setTokenReceived, profile }) {
               <p className="forgot-text">Forgot Password ?</p>
             </div>
           </PurpleBox>
-        </div>
+        </form>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default LogInPage;

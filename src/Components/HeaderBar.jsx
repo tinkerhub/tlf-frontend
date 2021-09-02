@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Styles/HeaderBar.css';
 
 function HeaderBar() {
@@ -8,8 +9,12 @@ function HeaderBar() {
                 <div className="title">TinkerHub</div>
                 <div className="title subtitle">Learning Facilitator</div>
             </div>
-
-            <div className="title logout">Logout</div>
+            <Link to="/" style={{ color: "#FFF" }}>
+                <div onClick={() => {
+                    localStorage.removeItem("access_token");
+                    localStorage.removeItem("profile");
+                }} className="title logout">Logout</div>
+            </Link>
 
         </div >
     );

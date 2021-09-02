@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-input[type="login-textfield"], input[type="password"], select{
+input[type="login-textfield"], input[type="password"], select[name="login"]{
     display: flex;
     max-width: 100%;
     height: 56px;

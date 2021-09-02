@@ -24,7 +24,7 @@ input[type="textfield"], input[type="date"], input[type="email"], select {
     border: 3px solid var(--tertiary);
 } */
 
-input[type="date"], select {
+input[type="date"], select[name="status"] {
     -webkit-align-items: center;
     align-items: center;
     display: -webkit-inline-flex;

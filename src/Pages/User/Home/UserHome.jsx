@@ -28,7 +28,7 @@ function UserHome({ profileprop }) {
             <Welcome
               name={profile.name}
               role={profile.role}
-              stack={profile.stack}
+              stack={profile.stack.charAt(0) + profile.stack.substr(1).toLowerCase()}
             />
           </Link>
 
@@ -56,7 +56,7 @@ function UserHome({ profileprop }) {
                     <td>{activity.due_date}</td>
                     <td>{activity.completed_date}</td>
                     <td>
-                      <a href="/user/update">
+                      <a href={"/user/update/" + activity.id} >
                         <img className="uicon" src={Due} alt="Due Icon" />
                       </a>
                     </td>

@@ -80,7 +80,8 @@
 .forgot-text {
   color: var(--white);
   margin-top: 0.4rem;
-  padding-left: 8%;
+  padding-right: 8%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 720px) {

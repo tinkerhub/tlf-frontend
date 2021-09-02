@@ -9,8 +9,8 @@ function TextField(props) {
             <p className="label" >{label}</p>
             {type === "dropdown"
                 ? <select name="status" onChange={onChange} >
-                    <option value={false}>No</option>
-                    <option value={true}>Yes</option>
+                    <option value={false}>Not Completed</option>
+                    <option value={true}>Completed</option>
                 </select>
                 : <input type={type} onChange={onChange} />}
         </div>
