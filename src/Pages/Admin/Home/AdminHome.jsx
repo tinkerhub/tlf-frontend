@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FilterHome from "../../../Components/FilterHome";
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
@@ -7,8 +7,18 @@ import "./AdminHome.css";
 import Edit from "./Edit.png";
 import Delete from "./Delete.png";
 import Profile from "../../User/Profile/Profile";
+import { getProfile } from "../../User/Home/userhomeapi";
 
-function AdminHome({ profile }) {
+function AdminHome({ profileprop }) {
+
+  const [profile, setProfile] = useState(profileprop);
+
+  useEffect(() => {
+    if (!profile) {
+      getProfile(setProfile);
+    }
+  }, [profile]);
+
   if (profile) {
     return (
       <div>
@@ -81,7 +91,7 @@ function AdminHome({ profile }) {
       </div>
     );
   } else {
-    <div>Loading...</div>;
+    return <div>Loading...</div>;
   }
 }
 

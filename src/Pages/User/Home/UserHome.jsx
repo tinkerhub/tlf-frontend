@@ -6,8 +6,19 @@ import Welcome from "../../../Components/Welcome";
 import "./UserHome.css";
 import Due from "./Due.png";
 import Finish from "./Finish.png";
+import { useEffect, useState } from "react";
+import { getProfile } from "./userhomeapi";
 
-function UserHome({ profile }) {
+function UserHome({ profileprop }) {
+
+  const [profile, setProfile] = useState(profileprop);
+
+  useEffect(() => {
+    if (!profile) {
+      getProfile(setProfile);
+    }
+  }, [profile]);
+
   if (profile) {
     return (
       <div>
