@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { getProfile } from "./userhomeapi";
 
 function UserHome({ profileprop }) {
-
   const [profile, setProfile] = useState(profileprop);
 
   useEffect(() => {
@@ -28,7 +27,9 @@ function UserHome({ profileprop }) {
             <Welcome
               name={profile.name}
               role={profile.role}
-              stack={profile.stack.charAt(0) + profile.stack.substr(1).toLowerCase()}
+              stack={
+                profile.stack.charAt(0) + profile.stack.substr(1).toLowerCase()
+              }
             />
           </Link>
 
@@ -55,11 +56,17 @@ function UserHome({ profileprop }) {
                     <td>{activity.assign_date}</td>
                     <td>{activity.due_date}</td>
                     <td>{activity.completed_date}</td>
-                    <td>
-                      <a href={"/user/update/" + activity.id} >
-                        <img className="uicon" src={Due} alt="Due Icon" />
-                      </a>
-                    </td>
+                    {activity.is_complete ? (
+                      <td>
+                        <img className="uicon" src={Finish} alt="Due Icon" />
+                      </td>
+                    ) : (
+                      <td>
+                        <a href={"/user/update/" + activity.id}>
+                          <img className="uicon" src={Due} alt="Due Icon" />
+                        </a>
+                      </td>
+                    )}
                   </tr>
                 ))}
               </tbody>
