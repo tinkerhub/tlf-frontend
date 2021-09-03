@@ -7,18 +7,18 @@ import Welcome from "../../../Components/Welcome";
 import "./ModeratorHome.css";
 import Edit from "./Edit.png";
 
-import { getFacilitators } from "./moderatorapi";
+import { getActivities } from "./moderatorapi";
 
 function ModeratorHome({ profile }) {
-  const [facilitators, setFacilitators] = useState();
+  const [activities, setActivities] = useState();
 
   useEffect(() => {
-    if (!facilitators) {
-      getFacilitators(setFacilitators);
+    if (!activities) {
+      getActivities(setActivities);
     }
-  }, [facilitators]);
+  }, [activities]);
 
-  if (profile) {
+  if (activities && profile) {
     return (
       <div>
         <div className="momain-container">
@@ -39,39 +39,17 @@ function ModeratorHome({ profile }) {
                   <th>Edit</th>
                 </tr>
 
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>TLF Website</td>
-                  <td>
-                    <a href="/moderator/update">
-                      <img className="eimage" src={Edit} alt="Edit Icon" />
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>TLF Website</td>
-                  <td>
-                    <img className="eimage" src={Edit} alt="Edit Icon" />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>TLF Website</td>
-                  <td>
-                    <img className="eimage" src={Edit} alt="Edit Icon" />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>TLF Website</td>
-                  <td>
-                    <img className="eimage" src={Edit} alt="Edit Icon" />
-                  </td>
-                </tr>
+                {activities.map((activity) => (
+                  <tr>
+                    <td>{activity.name}</td>
+                    <td>{activity.Activity.name}</td>
+                    <td>
+                      <a href="/moderator/update">
+                        <img className="eimage" src={Edit} alt="Edit Icon" />
+                      </a>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getFacilitators = async (setFacilitators) => {
+export const getActivities = async (setActivities) => {
   const url = `${process.env.REACT_APP_BACKEND_DOMAIN}/profile/staff`;
   const token = localStorage.getItem("access_token");
 
@@ -13,9 +13,9 @@ export const getFacilitators = async (setFacilitators) => {
     });
 
     console.log(response.data);
-    localStorage.setItem("facilitators", JSON.stringify(response.data));
-    if (setFacilitators) {
-      setFacilitators(response.data);
+    localStorage.setItem("activities", JSON.stringify(response.data));
+    if (setActivities) {
+      setActivities(response.data);
     } else return response.data;
   } catch (e) {
     console.log(e);
