@@ -11,6 +11,7 @@ import { getActivities } from "./moderatorapi";
 
 function ModeratorHome({ profile }) {
   const [activities, setActivities] = useState();
+  const [stack, setStack] = useState("FLUTTER");
 
   useEffect(() => {
     if (!activities) {
@@ -27,7 +28,7 @@ function ModeratorHome({ profile }) {
           <div className="orange-bars">
             <HomeSideHeader label="TLF Mentors" />
 
-            <FilterHome />
+            <FilterHome setStack={setStack}/>
           </div>
 
           <div className="table-container">
@@ -39,17 +40,25 @@ function ModeratorHome({ profile }) {
                   <th>Edit</th>
                 </tr>
 
-                {activities.map((activity) => (
-                  <tr>
-                    <td>{activity.name}</td>
-                    <td>{activity.Activity.name}</td>
-                    <td>
-                      <a href="/moderator/update">
-                        <img className="eimage" src={Edit} alt="Edit Icon" />
-                      </a>
-                    </td>
-                  </tr>
-                ))}
+                {activities.map((activity) => {
+                  if (activity.stack === stack) {
+                    return (
+                      <tr>
+                        <td>{activity.name}</td>
+                        <td>{activity.Activity.name}</td>
+                        <td>
+                          <a href="/moderator/update">
+                            <img
+                              className="eimage"
+                              src={Edit}
+                              alt="Edit Icon"
+                            />
+                          </a>
+                        </td>
+                      </tr>
+                    );
+                  }
+                })}
               </tbody>
             </table>
           </div>
