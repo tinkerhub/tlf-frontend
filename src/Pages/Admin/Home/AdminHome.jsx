@@ -8,18 +8,23 @@ import Edit from "./Edit.png";
 import Delete from "./Delete.png";
 import Profile from "../../User/Profile/Profile";
 import { getProfile } from "../../User/Home/userhomeapi";
+import { getActivities } from "../../Moderator/Home/moderatorapi";
 
 function AdminHome({ profileprop }) {
-
   const [profile, setProfile] = useState(profileprop);
+  const [activities, setActivities] = useState();
+  const [stack, setStack] = useState("FLUTTER");
 
   useEffect(() => {
     if (!profile) {
       getProfile(setProfile);
     }
-  }, [profile]);
+    if (!activities) {
+      getActivities(setActivities);
+    }
+  }, [profile, activities]);
 
-  if (profile) {
+  if (activities && profile) {
     return (
       <div>
         <div className="admain-container">
@@ -27,7 +32,7 @@ function AdminHome({ profileprop }) {
           <Welcome name={profile.name} role={profile.role} stack="" />
           <div className="aorange-bar">
             <HomeSideHeader label="TLF Mentors" />
-            <FilterHome />
+            <FilterHome setStack={setStack}/>
           </div>
 
           <div className="table-container">
@@ -40,50 +45,35 @@ function AdminHome({ profileprop }) {
                   <th>Delete</th>
                 </tr>
 
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>23-08-21</td>
-                  <td>
-                    <a href="/admin/update">
-                      <img className="eimage" src={Edit} alt="Edit Icon" />
-                    </a>
-                  </td>
-                  <td>
-                    <img className="dimage" src={Delete} alt="Delete Icon" />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>23-08-21</td>
-                  <td>
-                    <img className="eimage" src={Edit} alt="Edit Icon" />
-                  </td>
-                  <td>
-                    <img className="dimage" src={Delete} alt="Delete Icon" />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>23-08-21</td>
-                  <td>
-                    <img className="eimage" src={Edit} alt="Edit Icon" />
-                  </td>
-                  <td>
-                    <img className="dimage" src={Delete} alt="Delete Icon" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem Ipsum</td>
-                  <td>23-08-21</td>
-                  <td>
-                    <img className="eimage" src={Edit} alt="Edit Icon" />
-                  </td>
-                  <td>
-                    <img className="dimage" src={Delete} alt="Delete Icon" />
-                  </td>
-                </tr>
+                {activities.map((activity, i) => {
+                  if (
+                    activity.stack === stack &&
+                    !activity.Activity.is_complete
+                  ) {
+                    return (
+                      <tr key={i}>
+                        <td>{activity.name}</td>
+                        <td>{activity.Activity.name}</td>
+                        <td>
+                          <a href="/admin/update">
+                            <img
+                              className="eimage"
+                              src={Edit}
+                              alt="Edit Icon"
+                            />
+                          </a>
+                        </td>
+                        <td>
+                          <img
+                            className="dimage"
+                            src={Delete}
+                            alt="Delete Icon"
+                          />
+                        </td>
+                      </tr>
+                    );
+                  }
+                })}
               </tbody>
             </table>
           </div>
