@@ -28,7 +28,7 @@ function ModeratorHome({ profile }) {
           <div className="orange-bars">
             <HomeSideHeader label="TLF Mentors" />
 
-            <FilterHome setStack={setStack}/>
+            <FilterHome setStack={setStack} />
           </div>
 
           <div className="table-container">
@@ -40,10 +40,13 @@ function ModeratorHome({ profile }) {
                   <th>Edit</th>
                 </tr>
 
-                {activities.map((activity) => {
-                  if (activity.stack === stack) {
+                {activities.map((activity, i) => {
+                  if (
+                    activity.stack === stack &&
+                    !activity.Activity.is_complete
+                  ) {
                     return (
-                      <tr>
+                      <tr key={i}>
                         <td>{activity.name}</td>
                         <td>{activity.Activity.name}</td>
                         <td>
