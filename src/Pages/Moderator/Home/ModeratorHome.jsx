@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FilterHome from "../../../Components/FilterHome";
 import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
@@ -7,7 +7,17 @@ import Welcome from "../../../Components/Welcome";
 import "./ModeratorHome.css";
 import Edit from "./Edit.png";
 
+import { getFacilitators } from "./moderatorapi";
+
 function ModeratorHome({ profile }) {
+  const [facilitators, setFacilitators] = useState();
+
+  useEffect(() => {
+    if (!facilitators) {
+      getFacilitators(setFacilitators);
+    }
+  }, [facilitators]);
+
   if (profile) {
     return (
       <div>
@@ -68,10 +78,8 @@ function ModeratorHome({ profile }) {
         </div>
       </div>
     );
-  }else{
-    return(
-      <div>Loading....</div>
-    )
+  } else {
+    return <div>Loading....</div>;
   }
 }
 
