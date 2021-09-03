@@ -3,6 +3,7 @@ import axios from 'axios';
 export const updatetask = async (email, id, task, assignDate, dueDate, completedDate, isComplete) => {
     const token = localStorage.getItem("access_token");
     var body = {
+        email: email,
         name: task,
         assign_date: assignDate,
         due_date: dueDate,
@@ -12,6 +13,7 @@ export const updatetask = async (email, id, task, assignDate, dueDate, completed
     }
     if (!completedDate) {
         body = {
+            email: email,
             name: task,
             assign_date: assignDate,
             due_date: dueDate,
