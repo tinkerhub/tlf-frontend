@@ -9,6 +9,8 @@ import Delete from "./Delete.png";
 import Profile from "../../User/Profile/Profile";
 import { getProfile } from "../../User/Home/userhomeapi";
 import { getActivities } from "../../Moderator/Home/moderatorapi";
+import { deletetaskapi } from "./deletetaskapi";
+
 
 function AdminHome({ profileprop }) {
   const [profile, setProfile] = useState(profileprop);
@@ -24,6 +26,18 @@ function AdminHome({ profileprop }) {
     }
   }, [profile, activities]);
 
+  const deleteTask = async (task) => {
+    if (task) {
+      const res = await deletetaskapi(task);
+      if (res === "error") {
+        alert("Could not delete task");
+      }
+      else if (res === "success") {
+        window.location.reload();
+      }
+    }
+  }
+
   if (activities && profile) {
     return (
       <div>
@@ -32,7 +46,7 @@ function AdminHome({ profileprop }) {
           <Welcome name={profile.name} role={profile.role} stack="" />
           <div className="aorange-bar">
             <HomeSideHeader label="TLF Mentors" />
-            <FilterHome setStack={setStack}/>
+            <FilterHome setStack={setStack} />
           </div>
 
           <div className="table-container">
@@ -55,7 +69,7 @@ function AdminHome({ profileprop }) {
                         <td>{activity.name}</td>
                         <td>{activity.Activity.name}</td>
                         <td>
-                          <a href="/admin/update">
+                          <a href={"/admin/update/" + activity.Activity.id}>
                             <img
                               className="eimage"
                               src={Edit}
@@ -68,6 +82,7 @@ function AdminHome({ profileprop }) {
                             className="dimage"
                             src={Delete}
                             alt="Delete Icon"
+                            onClick={() => { deleteTask(activity.Activity.id) }}
                           />
                         </td>
                       </tr>

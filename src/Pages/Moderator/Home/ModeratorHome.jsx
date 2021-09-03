@@ -50,7 +50,7 @@ function ModeratorHome({ profile }) {
                         <td>{activity.name}</td>
                         <td>{activity.Activity.name}</td>
                         <td>
-                          <a href="/moderator/update">
+                          <a href={"/moderator/update/" + activity.Activity.id}>
                             <img
                               className="eimage"
                               src={Edit}
