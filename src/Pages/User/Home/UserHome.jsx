@@ -62,9 +62,9 @@ function UserHome({ profileprop }) {
                       </td>
                     ) : (
                       <td>
-                        <a href={"/user/update/" + activity.id}>
+                        <Link to={{ pathname: "/user/update/" + activity.id, data: activity }} >
                           <img className="uicon" src={Due} alt="Due Icon" />
-                        </a>
+                        </Link>
                       </td>
                     )}
                   </tr>

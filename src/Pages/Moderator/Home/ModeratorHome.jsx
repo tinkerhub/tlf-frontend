@@ -8,6 +8,7 @@ import "./ModeratorHome.css";
 import Edit from "./Edit.png";
 
 import { getActivities } from "./moderatorapi";
+import { Link } from "react-router-dom";
 
 function ModeratorHome({ profile }) {
   const [activities, setActivities] = useState();
@@ -50,13 +51,13 @@ function ModeratorHome({ profile }) {
                         <td>{activity.name}</td>
                         <td>{activity.Activity.name}</td>
                         <td>
-                          <a href={"/moderator/update/" + activity.Activity.id}>
+                          <Link to={{ pathname: "/moderator/update/" + activity.Activity.id, email: activity.email, data: activity.Activity }} >
                             <img
                               className="eimage"
                               src={Edit}
                               alt="Edit Icon"
                             />
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                     );

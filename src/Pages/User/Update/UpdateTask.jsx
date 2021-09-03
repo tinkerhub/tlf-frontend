@@ -9,11 +9,13 @@ import { updatetask } from './updatetaskapi';
 
 function UserUpdateTask(props) {
 
-    const [task, setTask] = useState('');
-    const [assignDate, setAssignDate] = useState('');
-    const [completedDate, setCompletedDate] = useState('');
-    const [dueDate, setDueDate] = useState('');
-    const [isComplete, setComplete] = useState();
+    const data = props.location.data;
+
+    const [task, setTask] = useState(data.name);
+    const [assignDate, setAssignDate] = useState(data.assign_date);
+    const [completedDate, setCompletedDate] = useState(data.completed_date);
+    const [dueDate, setDueDate] = useState(data.due_date);
+    const [isComplete, setComplete] = useState(data.is_complete);
 
     const id = props.match.params.id;
 
@@ -39,11 +41,11 @@ function UserUpdateTask(props) {
             <form className="container" onSubmit={handleSubmit}>
                 <RedBox label="Update Task" />
                 <div style={{ padding: '20px' }} />
-                <TextField label="Task Name" onChange={(e) => setTask(e.target.value)} />
-                <TextField type="date" label="Assign Date" onChange={(e) => setAssignDate(e.target.value)} />
-                <TextField type="date" label="Completed Date" onChange={(e) => setCompletedDate(e.target.value)} />
-                <TextField type="date" label="Due Date" onChange={(e) => setDueDate(e.target.value)} />
-                <TextField type="dropdown" label="Status" onChange={(e) => setComplete(e.target.value)} />
+                <TextField label="Task Name" value={task} onChange={(e) => setTask(e.target.value)} />
+                <TextField type="date" value={assignDate} label="Assign Date" onChange={(e) => setAssignDate(e.target.value)} />
+                <TextField type="date" value={completedDate} label="Completed Date" onChange={(e) => setCompletedDate(e.target.value)} />
+                <TextField type="date" value={dueDate} label="Due Date" onChange={(e) => setDueDate(e.target.value)} />
+                <TextField type="dropdown" value={isComplete} label="Status" onChange={(e) => setComplete(e.target.value)} />
                 <PurpleButton label="Update Task" />
             </form>
         </div>

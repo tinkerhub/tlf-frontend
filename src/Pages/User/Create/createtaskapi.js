@@ -2,13 +2,22 @@ import axios from 'axios';
 
 export const createtask = async (task, assignDate, dueDate, completedDate) => {
     const token = localStorage.getItem("access_token");
-    try {
-        let response = await axios.post(`${process.env.REACT_APP_BACKEND_DOMAIN}/activity/create/`, {
+    var body = {
+        name: task,
+        assign_date: assignDate,
+        due_date: dueDate,
+        completed_date: completedDate,
+    }
+    if (!completedDate) {
+        body = {
             name: task,
             assign_date: assignDate,
             due_date: dueDate,
-            completed_date: completedDate,
-        }, {
+        };
+    }
+    try {
+        let response = await axios.post(`${process.env.REACT_APP_BACKEND_DOMAIN}/activity/create/`,
+            body, {
             headers: {
                 Authorization: "Bearer " + token
             },

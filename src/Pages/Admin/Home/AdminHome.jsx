@@ -10,6 +10,7 @@ import Profile from "../../User/Profile/Profile";
 import { getProfile } from "../../User/Home/userhomeapi";
 import { getActivities } from "../../Moderator/Home/moderatorapi";
 import { deletetaskapi } from "./deletetaskapi";
+import { Link } from "react-router-dom";
 
 
 function AdminHome({ profileprop }) {
@@ -64,18 +65,19 @@ function AdminHome({ profileprop }) {
                     activity.stack === stack &&
                     !activity.Activity.is_complete
                   ) {
+                    console.log(activity.Activity);
                     return (
                       <tr key={i}>
                         <td>{activity.name}</td>
                         <td>{activity.Activity.name}</td>
                         <td>
-                          <a href={"/admin/update/" + activity.Activity.id}>
+                          <Link to={{ pathname: "/admin/update/" + activity.Activity.id, email: activity.email, data: activity.Activity }} >
                             <img
                               className="eimage"
                               src={Edit}
                               alt="Edit Icon"
                             />
-                          </a>
+                          </Link>
                         </td>
                         <td>
                           <img

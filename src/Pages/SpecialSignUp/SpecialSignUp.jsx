@@ -34,8 +34,8 @@ function SpecialSignUp() {
             <div className="login-form">
               <LoginTextField label="Full Name" setValue={setName} />
               <LoginTextField label="email or username" setValue={setEmail} />
-              <LoginTextField label="password" setValue={setPassword} />
-              <LoginTextField label="secret key" setValue={setSecret} />
+              <LoginTextField type="password" label="password" setValue={setPassword} />
+              <LoginTextField type="password" label="secret key" setValue={setSecret} />
             </div>
             <div className="signup-buttons">
               <Link to="/login">
