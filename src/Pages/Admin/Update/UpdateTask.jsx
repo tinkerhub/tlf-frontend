@@ -45,7 +45,7 @@ function AdminUpdateTask(props) {
                 <div style={{ padding: '20px' }} />
                 <TextField type="email" value={email} label="Facilitator Email" onChange={(e) => setEmail(e.target.value)} />
                 <TextField label="Task Name" value={task} onChange={(e) => setTask(e.target.value)} />
-                <TextField type="date" value={"2021-09-03T00:00:00"} label="Assign Date" onChange={(e) => setAssignDate(e.target.value)} />
+                <TextField type="date" value={assignDate} label="Assign Date" onChange={(e) => setAssignDate(e.target.value)} />
                 <TextField type="date" value={completedDate} label="Completed Date" onChange={(e) => setCompletedDate(e.target.value)} />
                 <TextField type="date" value={dueDate} label="Due Date" onChange={(e) => setDueDate(e.target.value)} />
                 <TextField type="dropdown" value={isComplete} label="Status" onChange={(e) => setComplete(e.target.value)} />
