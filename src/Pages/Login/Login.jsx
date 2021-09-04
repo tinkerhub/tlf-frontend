@@ -41,7 +41,7 @@ function LogInPage({ setTokenReceived, profile }) {
     <div className="mainanderror">
       {(() => {
         if (error) {
-          return <CustomizedSnackbars error={error} />;
+          return <CustomizedSnackbars error={error} severity={"error"} />;
         }
       })()}
       <div className="lcontainer">
