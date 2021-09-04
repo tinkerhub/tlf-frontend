@@ -42,9 +42,9 @@ function Profile({ profile }) {
                       if (!activity.is_complete) {
                         return (
                           <tr>
-                            <td>{profile.activities[0].name}</td>
-                            <td>{profile.activities[0].assign_date}</td>
-                            <td>{profile.activities[0].due_date}</td>
+                            <td>{activity.name}</td>
+                            <td>{activity.assign_date}</td>
+                            <td>{activity.due_date}</td>
                           </tr>
                         );
                       }
