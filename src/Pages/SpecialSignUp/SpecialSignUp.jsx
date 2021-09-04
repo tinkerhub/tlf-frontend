@@ -13,6 +13,13 @@ function SpecialSignUp() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [secret, setSecret] = useState();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await staffsignup(name, email, password, secret);
+    window.location.replace('/login');
+  }
+
   return (
     <div>
       <div className="lcontainer">
@@ -29,7 +36,7 @@ function SpecialSignUp() {
             </p>
           </div>
         </div>
-        <div className="lright-side">
+        <form className="lright-side" onSubmit={handleSubmit} >
           <PurpleBox>
             <div className="login-form">
               <LoginTextField label="Full Name" setValue={setName} />
@@ -56,7 +63,7 @@ function SpecialSignUp() {
               </Link>
             </div>
           </PurpleBox>
-        </div>
+        </form>
       </div>
     </div>
   );

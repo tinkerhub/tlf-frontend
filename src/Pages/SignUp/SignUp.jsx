@@ -13,6 +13,13 @@ function SignUpPage() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [stack, setStack] = useState();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await signup(name, email, stack, password);
+    window.location.replace('/login');
+  }
+
   return (
     <div className="lcontainer">
       <div className="lleft-side">
@@ -28,7 +35,7 @@ function SignUpPage() {
           </p>
         </div>
       </div>
-      <div className="lright-side">
+      <form className="lright-side" onSubmit={handleSubmit} >
         <PurpleBox>
           <div className="login-form">
             <LoginTextField label="Full Name" setValue={setName} />
@@ -58,8 +65,8 @@ function SignUpPage() {
             </Link>
           </div>
         </PurpleBox>
-      </div>
-    </div>
+      </form>
+    </div >
   );
 }
 
