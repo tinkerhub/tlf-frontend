@@ -23,7 +23,7 @@ function UserHome({ profileprop }) {
       <div>
         <div className="uhmain-container">
           <HomeNavBar />
-          <Link to="/user/profile/">
+          <a href="/user/profile/">
             <Welcome
               name={profile.name}
               role={profile.role}
@@ -31,7 +31,7 @@ function UserHome({ profileprop }) {
                 profile.stack.charAt(0) + profile.stack.substr(1).toLowerCase()
               }
             />
-          </Link>
+          </a>
 
           <HomeSideHeader label="Tasks" />
 
@@ -58,11 +58,23 @@ function UserHome({ profileprop }) {
                     <td>{activity.completed_date}</td>
                     {activity.is_complete ? (
                       <td>
-                        <img className="uicon" src={Finish} alt="Due Icon" />
+                        <Link
+                          to={{
+                            pathname: "/user/update/" + activity.id,
+                            data: activity,
+                          }}
+                        >
+                          <img className="uicon" src={Finish} alt="Due Icon" />
+                        </Link>
                       </td>
                     ) : (
                       <td>
-                        <Link to={{ pathname: "/user/update/" + activity.id, data: activity }} >
+                        <Link
+                          to={{
+                            pathname: "/user/update/" + activity.id,
+                            data: activity,
+                          }}
+                        >
                           <img className="uicon" src={Due} alt="Due Icon" />
                         </Link>
                       </td>

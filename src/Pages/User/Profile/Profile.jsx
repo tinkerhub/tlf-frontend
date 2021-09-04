@@ -29,33 +29,29 @@ function Profile({ profile }) {
                 <p className="profile-email">{profile.email}</p>
                 <button className="profile-pass">Change Password?</button>
               </div>
-
-              {(() => {
-                if (profile.activities[0]) {
-                  return (
-                    <div className="profile-table">
-                      <p className="table-header">Unfinished Tasks</p>
-                      <table id="pro-task">
-                        <tbody>
-                          <tr>
-                            <th>Name</th>
-                            <th>Assigned Date</th>
-                            <th>Due Date</th>
-                          </tr>
-
+              <div className="profile-table">
+                <p className="table-header">Unfinished Tasks</p>
+                <table id="pro-task">
+                  <tbody>
+                    <tr>
+                      <th>Name</th>
+                      <th>Assigned Date</th>
+                      <th>Due Date</th>
+                    </tr>
+                    {profile.activities.map((activity, i) => {
+                      if (!activity.is_complete) {
+                        return (
                           <tr>
                             <td>{profile.activities[0].name}</td>
                             <td>{profile.activities[0].assign_date}</td>
                             <td>{profile.activities[0].due_date}</td>
                           </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  );
-                }
-
-                return null;
-              })()}
+                        );
+                      }
+                    })}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
