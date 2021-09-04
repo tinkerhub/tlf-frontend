@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CustomizedSnackbars({ error }) {
+export default function CustomizedSnackbars({ error, severity }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
 
@@ -32,7 +32,7 @@ export default function CustomizedSnackbars({ error }) {
   return (
     <div className={classes.root}>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="error">
+        <Alert onClose={handleClose} severity={severity}>
           {error}
         </Alert>
       </Snackbar>
