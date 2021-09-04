@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const signup = (name, email, stack, password) => {
   const url = `${process.env.REACT_APP_BACKEND_DOMAIN}/auth/signup`;
+  console.log(process.env.REACT_APP_BACKEND_DOMAIN)
 
   const params = JSON.stringify({
     email: email,
