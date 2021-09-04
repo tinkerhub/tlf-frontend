@@ -35,7 +35,7 @@ function AdminUpdateTask(props) {
       isComplete
     );
     if (res === "success") {
-      setError(false);
+     setError(false);
       setMsg("Task Updated Successfully");
 
       setTimeout(function () {
@@ -43,7 +43,7 @@ function AdminUpdateTask(props) {
       }, 4000);
     } else if (res === "error") {
       setError(true);
-      setMsg("Task Created Failed");
+      setMsg("Task Updation Failed");
 
       setTimeout(function () {
         window.location.replace("/admin/home");
