@@ -7,21 +7,35 @@ import LoginTextField from "../../Components/LoginTextField";
 import "../Login/Login.css";
 
 import { signup } from "./signupapi";
+import CustomizedSnackbars from "../../Components/AlertSnackBar";
 
 function SignUpPage() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [stack, setStack] = useState();
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signup(name, email, stack, password);
-    window.location.replace('/login');
+
+    if (password.length >= 8) {
+      await signup(name, email, stack, password);
+      window.location.replace('/login');
+    }
+    else {
+      setError(true);
+      setTimeout(function () { window.location.reload(); }, 4000);
+    }
   }
 
   return (
     <div className="lcontainer">
+      {(() => {
+        if (error) {
+          return <CustomizedSnackbars message={"Password must contain Minimum eight characters"} severity={"error"} />;
+        }
+      })()}
       <div className="lleft-side">
         <div className="lcontents">
           <p className="lheader">
@@ -55,8 +69,8 @@ function SignUpPage() {
             </Link>
             <Link to="/login">
               <button
-                onClick={() => {
-                  signup(name, email, stack, password);
+                onClick={(e) => {
+                  handleSubmit(e);
                 }}
                 className="sbtn"
               >
