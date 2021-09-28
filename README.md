@@ -1,2 +1,3 @@
-# tlf-frontend
-Tinkerhub Learning Facilitators Website
+# Tinkerhub Learning Facilitators Program
+
+Tinkerhub Learning Facilitators Program website created in React.
