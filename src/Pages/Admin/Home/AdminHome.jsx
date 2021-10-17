@@ -66,12 +66,6 @@ function AdminHome({ profileprop }) {
                     console.log(activity.Activity);
                     return (
                       <tr key={i}>
-                        {/* <Link to={{
-                          pathname: "/userprofile/" + activity.id
-                        }}>
-                          <td>{activity.name}</td>
-                        </Link> */}
-
                         <td>
                           <Link
                             to={{

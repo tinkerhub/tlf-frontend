@@ -48,7 +48,15 @@ function ModeratorHome({ profile }) {
                   ) {
                     return (
                       <tr key={i}>
-                        <td>{activity.name}</td>
+                        <td>
+                          <Link
+                            to={{
+                              pathname: "/userprofile/" + activity.id,
+                            }}
+                          >
+                            <span>{activity.name}</span>
+                          </Link>
+                        </td>
                         <td>{activity.Activity.name}</td>
                         <td>
                           <Link to={{ pathname: "/moderator/update/" + activity.Activity.id, email: activity.email, data: activity.Activity }} >
