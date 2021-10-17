@@ -17,6 +17,7 @@ import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import Profile from "./Pages/User/Profile/Profile";
 
 import { getProfile } from "./Pages/User/Home/userhomeapi";
+import UserProfile from "./Pages/Admin/UserProfile/UserProfile";
 
 function App() {
   const [tokenreceived, setTokenReceived] = useState(false);
@@ -54,15 +55,27 @@ function App() {
           <Route exact path="/admin/create">
             <AdminCreateTask />
           </Route>
-          <Route exact path="/admin/update/:id" render={(props) => <AdminUpdateTask {...props} />} />
+          <Route
+            exact
+            path="/admin/update/:id"
+            render={(props) => <AdminUpdateTask {...props} />}
+          />
           <Route exact path="/user/create">
             <UserAddTask />
           </Route>
-          <Route exact path="/user/update/:id" render={(props) => <UserUpdateTask {...props} />} />
+          <Route
+            exact
+            path="/user/update/:id"
+            render={(props) => <UserUpdateTask {...props} />}
+          />
           <Route exact path="/moderator/create">
             <AdminCreateTask />
           </Route>
-          <Route exact path="/moderator/update/:id" render={(props) => <AdminUpdateTask {...props} />} />
+          <Route
+            exact
+            path="/moderator/update/:id"
+            render={(props) => <AdminUpdateTask {...props} />}
+          />
           <Route exact path="/user/profile">
             <Profile profile={profile} />
           </Route>
@@ -77,6 +90,9 @@ function App() {
           </Route>
           <Route exact path="/forgotpassword">
             <ForgotPassword />
+          </Route>
+          <Route exact path="/userprofile/:userid">
+            <UserProfile />
           </Route>
         </Switch>
       </Router>
