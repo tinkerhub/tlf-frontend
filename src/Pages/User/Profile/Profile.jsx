@@ -3,6 +3,9 @@ import HomeNavBar from "../../../Components/HomeNavBar";
 import HomeSideHeader from "../../../Components/HomeSideHeader";
 
 import JavaScriptProfile from "./JavaScriptProfile.png";
+import PythonProfile from "./PythonProfile.png";
+import FlutterProfile from "./FlutterProfile.png";
+
 import "./Profile.css";
 
 function Profile({ profile }) {
@@ -20,8 +23,35 @@ function Profile({ profile }) {
             </div>
             <div className="profile-main">
               <div className="profile-pic">
-                <img src={JavaScriptProfile} alt="" className="profile-image" />
+                {(() => {
+                  if (profile.stack === "JAVASCRIPT") {
+                    return (
+                      <img
+                        src={JavaScriptProfile}
+                        alt="JavaScript Icon"
+                        className="profile-image"
+                      />
+                    );
+                  } else if (profile.stack === "PYTHON") {
+                    return (
+                      <img
+                        src={PythonProfile}
+                        alt="Python Icon"
+                        className="profile-image"
+                      />
+                    );
+                  } else if (profile.stack === "FLUTTER") {
+                    return (
+                      <img
+                        src={FlutterProfile}
+                        alt="Flutter Icon"
+                        className="profile-image"
+                      />
+                    );
+                  }
+                })()}
               </div>
+
               <div className="profile-text">
                 <p className="profile-name">
                   <b>{profile.name}</b>
