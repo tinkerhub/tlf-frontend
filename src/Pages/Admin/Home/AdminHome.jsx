@@ -6,12 +6,10 @@ import Welcome from "../../../Components/Welcome";
 import "./AdminHome.css";
 import Edit from "./Edit.png";
 import Delete from "./Delete.png";
-import Profile from "../../User/Profile/Profile";
 import { getProfile } from "../../User/Home/userhomeapi";
 import { getActivities } from "../../Moderator/Home/moderatorapi";
 import { deletetaskapi } from "./deletetaskapi";
 import { Link } from "react-router-dom";
-
 
 function AdminHome({ profileprop }) {
   const [profile, setProfile] = useState(profileprop);
@@ -32,12 +30,11 @@ function AdminHome({ profileprop }) {
       const res = await deletetaskapi(task);
       if (res === "error") {
         alert("Could not delete task");
-      }
-      else if (res === "success") {
+      } else if (res === "success") {
         window.location.reload();
       }
     }
-  }
+  };
 
   if (activities && profile) {
     return (
@@ -65,13 +62,26 @@ function AdminHome({ profileprop }) {
                     activity.stack === stack &&
                     !activity.Activity.is_complete
                   ) {
-                    console.log(activity.Activity);
                     return (
                       <tr key={i}>
-                        <td>{activity.name}</td>
+                        <td>
+                          <Link
+                            to={{
+                              pathname: "/userprofile/" + activity.id,
+                            }}
+                          >
+                            <span>{activity.name}</span>
+                          </Link>
+                        </td>
                         <td>{activity.Activity.name}</td>
                         <td>
-                          <Link to={{ pathname: "/admin/update/" + activity.Activity.id, email: activity.email, data: activity.Activity }} >
+                          <Link
+                            to={{
+                              pathname: "/admin/update/" + activity.Activity.id,
+                              email: activity.email,
+                              data: activity.Activity,
+                            }}
+                          >
                             <img
                               className="eimage"
                               src={Edit}
@@ -84,11 +94,15 @@ function AdminHome({ profileprop }) {
                             className="dimage"
                             src={Delete}
                             alt="Delete Icon"
-                            onClick={() => { deleteTask(activity.Activity.id) }}
+                            onClick={() => {
+                              deleteTask(activity.Activity.id);
+                            }}
                           />
                         </td>
                       </tr>
                     );
+                  } else {
+                    return null;
                   }
                 })}
               </tbody>

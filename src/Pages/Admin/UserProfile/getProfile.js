@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const getProfile = async (setProfile) => {
-  const url = `${process.env.REACT_APP_BACKEND_DOMAIN}/profile`;
+export const getProfile = async (id, setUserProfile) => {
+  const url = `${process.env.REACT_APP_BACKEND_DOMAIN}/profile/staff/${id}`;
   const token = localStorage.getItem("access_token");
 
   try {
@@ -10,11 +10,7 @@ export const getProfile = async (setProfile) => {
         Authorization: `Bearer ${token}`,
       },
     });
-
-    localStorage.setItem("profile", JSON.stringify(response.data));
-    if (setProfile) {
-      setProfile(response.data);
-    } else return response.data;
+    setUserProfile(response.data);
   } catch (e) {
     console.log(e);
     return "error";
