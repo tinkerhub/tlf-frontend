@@ -4,7 +4,6 @@ export const getActivities = async (setActivities) => {
   const url = `${process.env.REACT_APP_BACKEND_DOMAIN}/profile/staff`;
   const token = localStorage.getItem("access_token");
 
-  console.log(token);
   try {
     let response = await axios.get(url, {
       headers: {
@@ -12,7 +11,6 @@ export const getActivities = async (setActivities) => {
       },
     });
 
-    console.log(response.data);
     localStorage.setItem("activities", JSON.stringify(response.data));
     if (setActivities) {
       setActivities(response.data);

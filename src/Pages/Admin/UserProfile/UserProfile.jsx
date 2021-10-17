@@ -28,7 +28,7 @@ const UserProfile = () => {
             <HomeNavBar />
             <div className="profile-body">
               <div className="profile-sidebar">
-                <HomeSideHeader label="Profile" />
+                <HomeSideHeader label=" TLF Profile" />
                 <div className="points-header">
                   <p>{profile.points} Points</p>
                 </div>

@@ -6,7 +6,6 @@ import Welcome from "../../../Components/Welcome";
 import "./AdminHome.css";
 import Edit from "./Edit.png";
 import Delete from "./Delete.png";
-import Profile from "../../User/Profile/Profile";
 import { getProfile } from "../../User/Home/userhomeapi";
 import { getActivities } from "../../Moderator/Home/moderatorapi";
 import { deletetaskapi } from "./deletetaskapi";
@@ -63,7 +62,6 @@ function AdminHome({ profileprop }) {
                     activity.stack === stack &&
                     !activity.Activity.is_complete
                   ) {
-                    console.log(activity.Activity);
                     return (
                       <tr key={i}>
                         <td>
@@ -103,6 +101,8 @@ function AdminHome({ profileprop }) {
                         </td>
                       </tr>
                     );
+                  } else {
+                    return null;
                   }
                 })}
               </tbody>
